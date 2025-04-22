@@ -28,7 +28,7 @@
                   "headers": []
                 },
                 {
-                  "id": "totalVisitedCongo",
+                  "id": "totalVisitsCongo",
                   "name": "DSS_HEALTH_NATIONAL_TOTAL_HOUSEHOLD_DISTRIBUTED",
                   "code": "",
                   "chartType": "metric",
