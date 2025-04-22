@@ -38,7 +38,7 @@
         "dateRefField": "",
         "requestQueryMap": "{\"province\": \"Data.boundaryHierarchy.province.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
         "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Households Covered for Date range\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}},\"aggs\":{\"Total Distributed Houses\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Distributed Houses\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}},\"aggs\":{\"Total Distributed Houses\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
       }
     ],
     "chartType": "metric",
@@ -49,16 +49,7 @@
     "aggregationPaths": [
       "Total Distributed Houses"
     ],
-    "isCappedTillToday": true,
-    "insight": {
-      "chartResponseMap": "totalVisitsCongo",
-      "action": "differenceOfNumbers",
-      "upwardIndicator": "positive",
-      "downwardIndicator": "negative",
-      "textMessage": "$indicator$value% than last $insightInterval",
-      "colorCode": "#228B22",
-      "insightInterval": "dateRange"
-    },
+    "insight": {},
     "_comment": " "
   },
   "populationCoveredTodayCongo": {
