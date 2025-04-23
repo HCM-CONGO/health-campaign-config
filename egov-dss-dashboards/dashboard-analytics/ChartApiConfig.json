@@ -205,6 +205,8 @@
     "plotLabel": "Provinces",
     "excludedColumns": [
       "Total population covered count",
+      "Total Count Households Distributed Cumulative",
+      "Total Population Covered",
       "End Date",
       "Start Date",
       "Overall Population Target",
