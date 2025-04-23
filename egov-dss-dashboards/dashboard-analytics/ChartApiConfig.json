@@ -264,6 +264,330 @@
     "insight": {},
     "_comment": " "
   },
+  "householdVisitsWithinDateRangeCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_HOUSEHOLDS_VISITED_OVER_DATERANGE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Households Covered for Date range\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}},\"aggs\":{\"DateRange household delivered\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "DateRange household delivered"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "householdVisitsTargetProvinceCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_PROVINCE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-index-v1",
+        "aggrQuery": "{\"size\": 0,\"aggs\": {\"AGGR\": {\"filters\": {\"filters\": {\"Campaign Filter\": {\"bool\": {\"must\": [{\"term\": {\"Data.targetType.keyword\": \"HOUSEHOLD\"}},{\"exists\": {\"field\": \"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\": [{\"exists\": {\"field\": \"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\": {\"Overall Target\": {\"sum\": {\"field\": \"Data.overallTarget\"}},\"Target per day\": {\"sum\": {\"field\": \"Data.targetPerDay\"}},\"Target Households per Day\": {\"bucket_script\": {\"buckets_path\": {\"tpd\": \"Target per day\"},\"script\": \"(params.tpd)*365\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Target Households per Day"
+    ],
+    "postAggregationTheory": "repsonseToDifferenceOfDates",
+    "isCappedByCampaignPeriod": [
+      "Overall Target"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "totalHouseholdCoverageProvinceCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_TOTAL_COVERAGE_HOUSEHOLD_VISITS_PROVINCE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Households Covered Cumulative\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}},\"aggs\":{\"Total Delivered Households\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filters\":{\"filters\":{\"Overall target\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"HOUSEHOLD\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\":{\"TargetValue\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "isCappedTillToday": true,
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Total Delivered Households",
+      "Overall target"
+    ],
+    "postAggregationTheory": "",
+    "insight": {
+      "chartResponseMap": "totalHouseholdCoverageProvinceCongo",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "overviewPopulationCoveredCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_POPULATION_COVERED",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Population Covered for Date range\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}},\"aggs\":{\"Data.memberCount\":{\"sum\":{\"field\":\"Data.memberCount\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Population Covered for Date range"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "overviewTotalPopulationCoveredCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_TOTAL_POPULATION_COVERED",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Population Covered\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}},\"aggs\":{\"Data.memberCount\":{\"sum\":{\"field\":\"Data.memberCount\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Total Population Covered"
+    ],
+    "isCappedTillToday": true,
+    "insight": {
+      "chartResponseMap": "overviewTotalPopulationCoveredCongo",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "overviewPopulationTargetedProvinceCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_POPULATION_TARGETED_PROVINCE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-index-v1",
+        "aggrQuery": "{\"size\": 0,\"aggs\": {\"AGGR\": {\"filters\": {\"filters\": {\"Campaign Filter\": {\"bool\": {\"must\": [{\"term\": {\"Data.targetType.keyword\": \"INDIVIDUAL\"}},{\"exists\": {\"field\": \"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\": [{\"exists\": {\"field\": \"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\": {\"Overall Target\": {\"sum\": {\"field\": \"Data.overallTarget\"}},\"Target per day\": {\"sum\": {\"field\": \"Data.targetPerDay\"}},\"Target Population per Day\": {\"bucket_script\": {\"buckets_path\": {\"tpd\": \"Target per day\"},\"script\": \"(params.tpd) * 365\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Target Population per Day"
+    ],
+    "postAggregationTheory": "repsonseToDifferenceOfDates",
+    "isCappedByCampaignPeriod": [
+      "Overall Target"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "overviewPopulationCoverageAchievedProvinceCongo": {
+    "chartName": "DSS_HEALTH_OVERVIEW_POPULATION_COVERAGE_ACHIEVED_PROVINCE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filters\":{\"filters\":{\"Population Filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}]}}}},\"aggs\":{\"Population Covered till Today\":{\"sum\":{\"field\":\"Data.memberCount\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filters\":{\"filters\":{\"Campaign Filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\":{\"Overall Population Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "isCappedTillToday": true,
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Population Covered till Today",
+      "Overall Population Target"
+    ],
+    "insight": {
+      "chartResponseMap": "overviewPopulationCoverageAchievedProvinceCongo",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "distributionsByRangeCongo": {
+    "chartName": "DSS_HEALTH_NATIONAL_DISTRIBUTIONS_DATE_RANGE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}],\"must_not\":[{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Distributions By Range\":{\"sum\":{\"field\":\"Data.quantity\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Distributions By Range"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "totalDistributionsTillTodayCongo": {
+    "chartName": "DSS_HEALTH_NATIONAL_TOTAL_DISTRIBUTED_TILL_TODAY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}],\"must_not\":[{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Total Distributions\":{\"sum\":{\"field\":\"Data.quantity\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Total Distributions"
+    ],
+    "isCappedTillToday": true,
+    "insight": {
+      "chartResponseMap": "totalDistributionsTillTodayCongo",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "distributionTargetProvinceCongo": {
+    "chartName": "DSS_HEALTH_NATIONAL_DISTRIBUTION_TARGET_PROVINCE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Bednets Target\":{\"filters\":{\"filters\":{\"distributions\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"PRODUCT\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}},\"Target\":{\"sum\":{\"field\":\"Data.targetPerDay\"}},\"Target by Range\":{\"bucket_script\":{\"buckets_path\":{\"target\":\"Target\"},\"script\":\"(params.target) * 365\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Target by Range"
+    ],
+    "postAggregationTheory": "repsonseToDifferenceOfDates",
+    "isCappedByCampaignPeriod": [
+      "Overall Target"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "distributionCoverageProvinceCongo": {
+    "chartName": "DSS_HEALTH_NATIONAL_DISTRIBUTION_COVERAGE_PROVINCE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Distribution Target\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"PRODUCT\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}},\"aggs\":{\"target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Distributions Coverage\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}],\"must_not\":[{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"distributions\":{\"sum\":{\"field\":\"Data.quantity\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "isCappedTillToday": true,
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Total Distributions Coverage",
+      "Distribution Target"
+    ],
+    "insight": {
+      "chartResponseMap": "distributionCoverageProvinceCongo",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
   "complaintsByHealthDistrictTotalCongo": {
     "chartName": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_TOTAL",
     "queries": [
@@ -2281,330 +2605,6 @@
       }
     ],
     "insight": {},
-    "_comment": " "
-  },
-  "householdVisitsWithinDateRangeCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_HOUSEHOLDS_VISITED_OVER_DATERANGE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}},{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"DateRange visits\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "DateRange visits"
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "householdVisitsTargetProvinceCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_PROVINCE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\": 0,\"aggs\": {\"AGGR\": {\"filters\": {\"filters\": {\"Campaign Filter\": {\"bool\": {\"must\": [{\"term\": {\"Data.targetType.keyword\": \"HOUSEHOLD\"}},{\"exists\": {\"field\": \"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\": [{\"exists\": {\"field\": \"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\": {\"Overall Target\": {\"sum\": {\"field\": \"Data.overallTarget\"}},\"Target per day\": {\"sum\": {\"field\": \"Data.targetPerDay\"}},\"Target Households per Day\": {\"bucket_script\": {\"buckets_path\": {\"tpd\": \"Target per day\"},\"script\": \"(params.tpd)*365\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Target Households per Day"
-    ],
-    "postAggregationTheory": "repsonseToDifferenceOfDates",
-    "isCappedByCampaignPeriod": [
-      "Overall Target"
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "totalHouseholdCoverageProvinceCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_TOTAL_COVERAGE_HOUSEHOLD_VISITS_PROVINCE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}},{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Total visits\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filters\":{\"filters\":{\"Overall target\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"HOUSEHOLD\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\":{\"TargetValue\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "percentage",
-    "isCappedTillToday": true,
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "percentage",
-    "aggregationPaths": [
-      "Total visits",
-      "Overall target"
-    ],
-    "postAggregationTheory": "",
-    "insight": {
-      "chartResponseMap": "totalHouseholdCoverageProvinceCongo",
-      "action": "differenceOfNumbers",
-      "upwardIndicator": "positive",
-      "downwardIndicator": "negative",
-      "textMessage": "$indicator$value% than last $insightInterval",
-      "colorCode": "#228B22",
-      "insightInterval": "dateRange"
-    },
-    "_comment": " "
-  },
-  "overviewPopulationCoveredCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_POPULATION_COVERED",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}},{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Population Covered for Date range\":{\"sum\":{\"field\":\"Data.household.memberCount\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Population Covered for Date range"
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "overviewTotalPopulationCoveredCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_TOTAL_POPULATION_COVERED",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}},{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Total Population Covered\":{\"sum\":{\"field\":\"Data.household.memberCount\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Total Population Covered"
-    ],
-    "isCappedTillToday": true,
-    "insight": {
-      "chartResponseMap": "overviewTotalPopulationCoveredCongo",
-      "action": "differenceOfNumbers",
-      "upwardIndicator": "positive",
-      "downwardIndicator": "negative",
-      "textMessage": "$indicator$value% than last $insightInterval",
-      "colorCode": "#228B22",
-      "insightInterval": "dateRange"
-    },
-    "_comment": " "
-  },
-  "overviewPopulationTargetedProvinceCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_POPULATION_TARGETED_PROVINCE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\": 0,\"aggs\": {\"AGGR\": {\"filters\": {\"filters\": {\"Campaign Filter\": {\"bool\": {\"must\": [{\"term\": {\"Data.targetType.keyword\": \"INDIVIDUAL\"}},{\"exists\": {\"field\": \"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\": [{\"exists\": {\"field\": \"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\": {\"Overall Target\": {\"sum\": {\"field\": \"Data.overallTarget\"}},\"Target per day\": {\"sum\": {\"field\": \"Data.targetPerDay\"}},\"Target Population per Day\": {\"bucket_script\": {\"buckets_path\": {\"tpd\": \"Target per day\"},\"script\": \"(params.tpd) * 365\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Target Population per Day"
-    ],
-    "postAggregationTheory": "repsonseToDifferenceOfDates",
-    "isCappedByCampaignPeriod": [
-      "Overall Target"
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "overviewPopulationCoverageAchievedProvinceCongo": {
-    "chartName": "DSS_HEALTH_OVERVIEW_POPULATION_COVERAGE_ACHIEVED_PROVINCE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}},{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Population Covered till Today\":{\"sum\":{\"field\":\"Data.household.memberCount\"}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filters\":{\"filters\":{\"Campaign Filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\":{\"Overall Population Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "percentage",
-    "isCappedTillToday": true,
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "percentage",
-    "aggregationPaths": [
-      "Population Covered till Today",
-      "Overall Population Target"
-    ],
-    "insight": {
-      "chartResponseMap": "overviewPopulationCoverageAchievedProvinceCongo",
-      "action": "differenceOfNumbers",
-      "upwardIndicator": "positive",
-      "downwardIndicator": "negative",
-      "textMessage": "$indicator$value% than last $insightInterval",
-      "colorCode": "#228B22",
-      "insightInterval": "dateRange"
-    },
-    "_comment": " "
-  },
-  "distributionsByRangeCongo": {
-    "chartName": "DSS_HEALTH_NATIONAL_DISTRIBUTIONS_DATE_RANGE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}],\"must_not\":[{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Distributions By Range\":{\"sum\":{\"field\":\"Data.quantity\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Distributions By Range"
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "totalDistributionsTillTodayCongo": {
-    "chartName": "DSS_HEALTH_NATIONAL_TOTAL_DISTRIBUTED_TILL_TODAY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}],\"must_not\":[{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"Total Distributions\":{\"sum\":{\"field\":\"Data.quantity\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Total Distributions"
-    ],
-    "isCappedTillToday": true,
-    "insight": {
-      "chartResponseMap": "totalDistributionsTillTodayCongo",
-      "action": "differenceOfNumbers",
-      "upwardIndicator": "positive",
-      "downwardIndicator": "negative",
-      "textMessage": "$indicator$value% than last $insightInterval",
-      "colorCode": "#228B22",
-      "insightInterval": "dateRange"
-    },
-    "_comment": " "
-  },
-  "distributionTargetProvinceCongo": {
-    "chartName": "DSS_HEALTH_NATIONAL_DISTRIBUTION_TARGET_PROVINCE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Bednets Target\":{\"filters\":{\"filters\":{\"distributions\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"PRODUCT\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}}}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}},\"Target\":{\"sum\":{\"field\":\"Data.targetPerDay\"}},\"Target by Range\":{\"bucket_script\":{\"buckets_path\":{\"target\":\"Target\"},\"script\":\"(params.target) * 365\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Target by Range"
-    ],
-    "postAggregationTheory": "repsonseToDifferenceOfDates",
-    "isCappedByCampaignPeriod": [
-      "Overall Target"
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "distributionCoverageProvinceCongo": {
-    "chartName": "DSS_HEALTH_NATIONAL_DISTRIBUTION_COVERAGE_PROVINCE",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Distribution Target\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"PRODUCT\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.department.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}}]}},\"aggs\":{\"target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Distributions Coverage\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_SUCCESS\"}}],\"must_not\":[{\"terms\":{\"Data.additionalDetails.communityKey.keyword\":[\"refugee_camps\",\"special_groups\"]}}]}},\"aggs\":{\"distributions\":{\"sum\":{\"field\":\"Data.quantity\"}}}}}}"
-      }
-    ],
-    "chartType": "metric",
-    "valueType": "percentage",
-    "isCappedTillToday": true,
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "percentage",
-    "aggregationPaths": [
-      "Total Distributions Coverage",
-      "Distribution Target"
-    ],
-    "insight": {
-      "chartResponseMap": "distributionCoverageProvinceCongo",
-      "action": "differenceOfNumbers",
-      "upwardIndicator": "positive",
-      "downwardIndicator": "negative",
-      "textMessage": "$indicator$value% than last $insightInterval",
-      "colorCode": "#228B22",
-      "insightInterval": "dateRange"
-    },
     "_comment": " "
   },
   "totalComplaintsRegisteredCongo": {
