@@ -1308,7 +1308,7 @@
     "documentType": "_doc",
     "action": "",
     "showFooter": true,
-    "plotLabel": "AreaOfResponsibility",
+    "plotLabel": "Village",
     "excludedColumns": [
       "Resolved Complaints Count",
       "Rejected Complaints Count",
@@ -1501,7 +1501,7 @@
     "filterKeys": [
       {
         "key": "district",
-        "column": "Open complaints Health District"
+        "column": "HealthDistrict"
       }
     ],
     "chartType": "xtable",
@@ -1510,7 +1510,7 @@
     "documentType": "_doc",
     "action": "",
     "showFooter": true,
-    "plotLabel": "Open complaints Health District",
+    "plotLabel": "HealthDistrict",
     "excludedColumns": [],
     "hideInsights": true,
     "hideHeaderDenomination": true,
@@ -1541,7 +1541,7 @@
     "filterKeys": [
       {
         "key": "healthArea",
-        "column": "Open complaints Municipality"
+        "column": "HealthArea"
       }
     ],
     "chartType": "xtable",
@@ -1550,7 +1550,7 @@
     "documentType": "_doc",
     "action": "",
     "showFooter": true,
-    "plotLabel": "Open complaints Municipality",
+    "plotLabel": "HealthArea",
     "excludedColumns": [],
     "hideInsights": true,
     "hideHeaderDenomination": true,
