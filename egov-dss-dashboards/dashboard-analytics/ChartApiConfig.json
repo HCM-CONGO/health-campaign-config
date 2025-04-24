@@ -1902,7 +1902,7 @@
     "action": "",
     "filterKeys": [],
     "aggregationPaths": [
-      "Checklist name"
+        "Supervisor Role"
     ],
     "insight": {},
     "_comment": " "
