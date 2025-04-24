@@ -1299,7 +1299,7 @@
     "filterKeys": [
       {
         "key": "village",
-        "column": "AreaOfResponsibility"
+        "column": "Village"
       }
     ],
     "chartType": "xtable",
@@ -1581,7 +1581,7 @@
     "filterKeys": [
       {
         "key": "village",
-        "column": "Open complaints AreaOfResponsibility"
+        "column": "Village"
       }
     ],
     "chartType": "xtable",
