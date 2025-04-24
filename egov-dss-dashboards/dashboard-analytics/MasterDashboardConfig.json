@@ -1743,6 +1743,24 @@
                   "headers": []
                 }
               ]
+            },
+            {
+              "id": 30791,
+              "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "label": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "checklistCompletionRateBySupervisorsCongo",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
             }
           ]
         },
@@ -3521,6 +3539,24 @@
                 {
                   "id": "checklistCompletionRateOfHealthFacilitySupervisorCongo",
                   "name": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 40791,
+              "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "label": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "checklistCompletionRateBySupervisorsCongo",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
