@@ -2,7 +2,7 @@
   "_comment": "Master dashboard which holds all the possible visualisation. Note new dashboards/visualisations can be added",
   "dashboards": [
     {
-      "name": "DSS_HEALTH_NATIONAL_DASHBOARD_BURUNDI_HEADING",
+      "name": "DSS_HEALTH_NATIONAL_DASHBOARD_HEADING",
       "id": "national-health-dashboard",
       "isActive": "",
       "style": "linear",
@@ -47,7 +47,7 @@
               "charts": [
                 {
                   "id": "populationCoveredTodayCongo",
-                  "name": "DSS_HEALTH_NATIONAL_POPULATION_COVERED_TODAY_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_POPULATION_COVERED_TODAY",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -55,7 +55,7 @@
                 },
                 {
                   "id": "totalPopulationCoveredCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_POPULATION_COVERED_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_POPULATION_COVERED",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -105,7 +105,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageHeatMapCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -123,7 +123,7 @@
               "charts": [
                 {
                   "id": "populationCoverageHeatMapCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -152,7 +152,7 @@
               "charts": [
                 {
                   "id": "coverageByProvinceCongo",
-                  "name": "DSS_COVERAGE_BY_PROVINCE_BURUNDI",
+                  "name": "DSS_COVERAGE_BY_PROVINCE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "name": "DSS_HEALTH_OVERVIEW_DASHBOARD_BURUNDI_HEADING",
+      "name": "DSS_HEALTH_OVERVIEW_DASHBOARD_HEADING",
       "id": "provincial-health-dashboard",
       "isActive": "",
       "style": "linear",
@@ -190,7 +190,7 @@
               "charts": [
                 {
                   "id": "householdVisitsWithinDateRangeCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_HOUSEHOLDS_VISITED_OVER_DATERANGE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_HOUSEHOLDS_VISITED_OVER_DATERANGE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -198,7 +198,7 @@
                 },
                 {
                   "id": "totalVisitsCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_HOUSEHOLD_VISITS_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_HOUSEHOLD_VISITS",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -206,7 +206,7 @@
                 },
                 {
                   "id": "householdVisitsTargetProvinceCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -214,7 +214,7 @@
                 },
                 {
                   "id": "totalHouseholdCoverageProvinceCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COVERAGE_HOUSEHOLD_VISITS_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COVERAGE_HOUSEHOLD_VISITS_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -232,7 +232,7 @@
               "charts": [
                 {
                   "id": "overviewPopulationCoveredCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERED_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERED",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -240,7 +240,7 @@
                 },
                 {
                   "id": "overviewTotalPopulationCoveredCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_POPULATION_COVERED_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_POPULATION_COVERED",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -248,7 +248,7 @@
                 },
                 {
                   "id": "overviewPopulationTargetedProvinceCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_TARGETED_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_TARGETED_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -256,7 +256,7 @@
                 },
                 {
                   "id": "overviewPopulationCoverageAchievedProvinceCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERAGE_ACHIEVED_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERAGE_ACHIEVED_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -274,7 +274,7 @@
               "charts": [
                 {
                   "id": "distributionsByRangeCongo",
-                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTIONS_DATE_RANGE_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTIONS_DATE_RANGE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -282,7 +282,7 @@
                 },
                 {
                   "id": "totalDistributionsTillTodayCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_DISTRIBUTED_TILL_TODAY_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_DISTRIBUTED_TILL_TODAY",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -290,7 +290,7 @@
                 },
                 {
                   "id": "distributionTargetProvinceCongo",
-                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_TARGET_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_TARGET_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -298,7 +298,7 @@
                 },
                 {
                   "id": "distributionCoverageProvinceCongo",
-                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_COVERAGE_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_COVERAGE_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -322,7 +322,7 @@
               "charts": [
                 {
                   "id": "vouchersDistributedTodayOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_DISTRIBUTED_TODAY_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_DISTRIBUTED_TODAY_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -330,7 +330,7 @@
                 },
                 {
                   "id": "totalVouchersDistributedOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_DISTRIBUTED_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_DISTRIBUTED_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -338,7 +338,7 @@
                 },
                 {
                   "id": "vouchersRedeemedTodayOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_REDEEMED_TODAY_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_REDEEMED_TODAY_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -346,7 +346,7 @@
                 },
                 {
                   "id": "totalVouchersRedeemedOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_REDEEMED_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_REDEEMED_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -454,7 +454,7 @@
               "charts": [
                 {
                   "id": "totalComplaintsRegisteredCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BREAKDOWN_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BREAKDOWN",
                   "code": "",
                   "chartType": "donut",
                   "filter": "",
@@ -478,7 +478,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageBarchartByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_HealthDistrict_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_HealthDistrict",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -502,7 +502,7 @@
               "charts": [
                 {
                   "id": "daysInventoryStockLastsProvinceCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_PROVINCE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -520,7 +520,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_CHECKLISTS_COMPLETION_RATE_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_CHECKLISTS_COMPLETION_RATE_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -544,7 +544,7 @@
               "charts": [
                 {
                   "id": "registrarSyncSummaryProvinceCongo",
-                  "name": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -568,7 +568,7 @@
               "charts": [
                 {
                   "id": "housesVisitedBarChartDistrictPercentCongo",
-                  "name": "DSS_HEALTH_HOUSES_VISITED_DISTRICT_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSES_VISITED_DISTRICT_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -577,7 +577,7 @@
                 },
                 {
                   "id": "housesVisitedBarChartDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSES_VISITED_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSES_VISITED_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -596,7 +596,7 @@
               "charts": [
                 {
                   "id": "populationCoveredBarChartDistrictPercentCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRICT_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRICT_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -605,7 +605,7 @@
                 },
                 {
                   "id": "populationCoveredBarChartDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -630,7 +630,7 @@
               "charts": [
                 {
                   "id": "closedHouseholdsDistrictPercentCongo",
-                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_DISTRICT_PERCENTAGE_BURUNDI",
+                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_DISTRICT_PERCENTAGE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -639,7 +639,7 @@
                 },
                 {
                   "id": "closedHouseholdsDistrictCongo",
-                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -658,7 +658,7 @@
               "charts": [
                 {
                   "id": "refusalCasesDistrictPercentCongo",
-                  "name": "DSS_HEALTH_REFUSAL_CASES_DISTRICT_PERCENTAGE_BURUNDI",
+                  "name": "DSS_HEALTH_REFUSAL_CASES_DISTRICT_PERCENTAGE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -667,7 +667,7 @@
                 },
                 {
                   "id": "refusalCasesDistrictCongo",
-                  "name": "DSS_HEALTH_REFUSAL_CASES_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_REFUSAL_CASES_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -718,7 +718,7 @@
               "charts": [
                 {
                   "id": "actualVsPlannedHouseholdLineGraphProvinceCongo",
-                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_HOUSEHOLD_LINE_GRAPH_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_HOUSEHOLD_LINE_GRAPH_PROVINCE",
                   "code": "",
                   "chartType": "line",
                   "filter": "",
@@ -727,7 +727,7 @@
                 },
                 {
                   "id": "actualVsPlannedPopulationLineGraphProvinceCongo",
-                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_POPULATION_LINE_GRAPH_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_POPULATION_LINE_GRAPH_PROVINCE",
                   "code": "",
                   "chartType": "line",
                   "filter": "",
@@ -736,7 +736,7 @@
                 },
                 {
                   "id": "actualVsPlannedBednetsLineGraphProvinceCongo",
-                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_BEDNETS_LINE_GRAPH_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_BEDNETS_LINE_GRAPH_PROVINCE",
                   "code": "",
                   "chartType": "line",
                   "filter": "",
@@ -761,7 +761,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageHeatMapProvinceCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -770,7 +770,7 @@
                 },
                 {
                   "id": "populationCoverageHeatMapProvinceCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_PROVINCE",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -795,7 +795,7 @@
               "charts": [
                 {
                   "id": "registrationSummaryByDistrictCongo",
-                  "name": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -804,7 +804,7 @@
                 },
                 {
                   "id": "registrationSummaryByDistrictDayCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -829,7 +829,7 @@
               "charts": [
                 {
                   "id": "distributorSyncSummaryProvinceCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTOR_SYNC_SUMMARY_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTOR_SYNC_SUMMARY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -853,7 +853,7 @@
               "charts": [
                 {
                   "id": "distributionCoverageByDistrictPercentCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -862,7 +862,7 @@
                 },
                 {
                   "id": "distributionCoverageByDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -881,7 +881,7 @@
               "charts": [
                 {
                   "id": "populationCoveredDistributionDistrictPercentageCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_DISTRICT_PERCENTAGE_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_DISTRICT_PERCENTAGE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -890,7 +890,7 @@
                 },
                 {
                   "id": "populationCoveredDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -915,7 +915,7 @@
               "charts": [
                 {
                   "id": "bednetsDistributionCoverageDistrictPercentCongo",
-                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_DISTRICT_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_DISTRICT_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -924,7 +924,7 @@
                 },
                 {
                   "id": "bednetsDistributionCoverageDistrictCongo",
-                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -943,7 +943,7 @@
               "charts": [
                 {
                   "id": "registrationAndDistributionBarChartHealthDistrictCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -967,7 +967,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageHeatMapDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -976,7 +976,7 @@
                 },
                 {
                   "id": "populationCoverageHeatMapDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRIBUTION_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRIBUTION_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -985,7 +985,7 @@
                 },
                 {
                   "id": "bednetsCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNETS_COVERAGE_HEATMAP_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNETS_COVERAGE_HEATMAP_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -1004,7 +1004,7 @@
               "charts": [
                 {
                   "id": "distributionCoverageSpecialGroupsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1013,7 +1013,7 @@
                 },
                 {
                   "id": "distributionCoverageSpecialGroupsDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1038,7 +1038,7 @@
               "charts": [
                 {
                   "id": "distributionCoverageRefugeeCampsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1047,7 +1047,7 @@
                 },
                 {
                   "id": "distributionCoverageRefugeeCampsDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1066,7 +1066,7 @@
               "charts": [
                 {
                   "id": "bednetDistributionCoverageSpecialGroupsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1075,7 +1075,7 @@
                 },
                 {
                   "id": "bednetDistributionCoverageSpecialGroupsDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1100,7 +1100,7 @@
               "charts": [
                 {
                   "id": "bednetDistributionCoverageRefugeeCampsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1109,7 +1109,7 @@
                 },
                 {
                   "id": "bednetDistributionCoverageRefugeeCampsDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1134,7 +1134,7 @@
               "charts": [
                 {
                   "id": "distributionSummaryByDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1143,7 +1143,7 @@
                 },
                 {
                   "id": "distributionSummaryByDistrictDayCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1246,7 +1246,7 @@
               "charts": [
                 {
                   "id": "complaintsByHealthDistrictTotalCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_TOTAL_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_TOTAL",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1264,7 +1264,7 @@
               "charts": [
                 {
                   "id": "totalComplaintsRegisteredByTypeCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BY_TYPE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BY_TYPE",
                   "code": "",
                   "chartType": "donut",
                   "filter": "",
@@ -1288,7 +1288,7 @@
               "charts": [
                 {
                   "id": "complaintsByStatusBreakdownProvinceCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_BREAKDOWN_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_BREAKDOWN_PROVINCE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1307,7 +1307,7 @@
               "charts": [
                 {
                   "id": "complaintsByTypeBreakdownProvincialCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_TYPE_BREAKDOWN_PROVINCIAL_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_TYPE_BREAKDOWN_PROVINCIAL",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1332,7 +1332,7 @@
               "charts": [
                 {
                   "id": "complaintsShareByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1350,7 +1350,7 @@
               "charts": [
                 {
                   "id": "averageResolutionTimeProvinceCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_AVVERAGE_RESOLUTION_TIME_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_AVVERAGE_RESOLUTION_TIME_PROVINCE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1374,7 +1374,7 @@
               "charts": [
                 {
                   "id": "complaintsByStatusSummaryProvinceCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_PROVINCE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1383,7 +1383,7 @@
                 },
                 {
                   "id": "complaintsByStatusSummaryDayCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_DAY_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_DAY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1408,7 +1408,7 @@
               "charts": [
                 {
                   "id": "openComplaintsSummaryByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_OPEN_COMPLAINTS_SUMMARY_BY_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OPEN_COMPLAINTS_SUMMARY_BY_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1432,7 +1432,7 @@
               "charts": [
                 {
                   "id": "warehouseManagerUserSyncCongo",
-                  "name": "DSS_HEALTH_WAREHOUSE_MANAGER_USER_SYNC_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_WAREHOUSE_MANAGER_USER_SYNC_RATE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1456,7 +1456,7 @@
               "charts": [
                 {
                   "id": "daysInventoryStockLastsProvinceCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_PROVINCE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1474,7 +1474,7 @@
               "charts": [
                 {
                   "id": "inventoryStockInHandProvinceCongo",
-                  "name": "DSS_HEALTH_INVENTORY_STOCK_IN_HAND_BURUNDI",
+                  "name": "DSS_HEALTH_INVENTORY_STOCK_IN_HAND",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1498,7 +1498,7 @@
               "charts": [
                 {
                   "id": "inventoryTheoreticalVsManualStockDistrictCongo",
-                  "name": "DSS_HEALTH_THEORETICAL_VS_MANUAL_STOCK_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_THEORETICAL_VS_MANUAL_STOCK_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1516,7 +1516,7 @@
               "charts": [
                 {
                   "id": "stockTransactionsBreakdownProvincialCongo",
-                  "name": "DSS_HEALTH_STOCK_TRANSACTIONS_PROVINCIAL_BURUNDI",
+                  "name": "DSS_HEALTH_STOCK_TRANSACTIONS_PROVINCIAL",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1532,15 +1532,15 @@
           "vizArray": [
             {
               "id": 3071,
-              "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
-              "label": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+              "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
+              "label": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
               "vizType": "latlong",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
                   "id": "warehouseDistributionLatLongPointsCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "points",
                   "filter": "",
@@ -1548,7 +1548,7 @@
                 },
                 {
                   "id": "warehouseDistributionLatLongTableAvlRcvdDispDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1556,7 +1556,7 @@
                 },
                 {
                   "id": "warehouseDistributionLatLongTableDaysStockLastsDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1564,7 +1564,7 @@
                 },
                 {
                   "id": "warehouseDistributionLatLongTableAvlRcvdDispFacilitiesCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1572,7 +1572,7 @@
                 },
                 {
                   "id": "warehouseDistributionLatLongTableStockStatusDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1580,7 +1580,7 @@
                 },
                 {
                   "id": "warehouseDistributionLatLongTableWarNumDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1604,7 +1604,7 @@
               "charts": [
                 {
                   "id": "InventorySummaryByDistrictCongo",
-                  "name": "DSS_HEALTH_INVENTORY_SUMMARY_BY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_INVENTORY_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1628,7 +1628,7 @@
               "charts": [
                 {
                   "id": "supervisorUserSyncCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISOR_USER_SYNC_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISOR_USER_SYNC_RATE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1652,7 +1652,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateOfNationalSupervisorCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_NATIONAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_NATIONAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1670,7 +1670,7 @@
               "charts": [
                 {
                   "id": "userDataSyncRateCongo",
-                  "name": "DSS_HEALTH_USER_DATA_SYNC_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_USER_DATA_SYNC_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1694,7 +1694,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateOfProvincialSupervisorCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_PROVINCIAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_PROVINCIAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1712,7 +1712,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateOfDistrictSupervisorCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_DISTRICT_SUPERVISORS_CHECKLISTS_COMPLETION_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_DISTRICT_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1727,6 +1727,30 @@
           "name": "DSS_HEALTH_SUPERVISION",
           "vizArray": [
             {
+              "id": 3079,
+              "name": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "label": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "checklistCompletionRateOfHealthFacilitySupervisorCongo",
+                  "name": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "name": "DSS_HEALTH_SUPERVISION",
+          "vizArray": [
+            {
               "id": 3078,
               "name": "DSS_HEALTH_SUPERVISION_SUMMARY",
               "label": "DSS_HEALTH_SUPERVISION_SUMMARY",
@@ -1736,7 +1760,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateBySupervisorsBoundarySummaryHealthDistrictCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_BOUNDARY_SUMMARY_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_BOUNDARY_SUMMARY_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1745,7 +1769,7 @@
                 },
                 {
                   "id": "checklistCompletionRateBySupervisorsDaySummaryCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_DAY_SUMMARY_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_DAY_SUMMARY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -1770,7 +1794,7 @@
               "charts": [
                 {
                   "id": "averageBednetsDistributedHealthDistrictCongo",
-                  "name": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1788,7 +1812,7 @@
               "charts": [
                 {
                   "id": "registrationAndDistributionBarChartHealthDistrictCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1864,7 +1888,7 @@
               "charts": [
                 {
                   "id": "housesWithMoreThanTwentyMembersByHealthDistrictCongo",
-                  "name": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1888,7 +1912,7 @@
               "charts": [
                 {
                   "id": "locationNotEnabledByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_LOCATION_NOT_ENABLED_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_LOCATION_NOT_ENABLED_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1930,7 +1954,7 @@
               "charts": [
                 {
                   "id": "incompleteRecordsByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_INCOMPLETE_RECORDS_BURUNDI",
+                  "name": "DSS_HEALTH_INCOMPLETE_RECORDS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1948,7 +1972,7 @@
               "charts": [
                 {
                   "id": "suspectedFraudsByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_SUSPECTED_FRAUDS_BURUNDI",
+                  "name": "DSS_HEALTH_SUSPECTED_FRAUDS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -1972,77 +1996,9 @@
               "charts": [
                 {
                   "id": "dataQualitySummaryDistrictCongo",
-                  "name": "DSS_HEALTH_DATA_QUALITY_SUMMARY_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_DATA_QUALITY_SUMMARY_DISTRICT",
                   "code": "",
                   "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_PAYMENTS",
-          "vizArray": [
-            {
-              "id": 4200,
-              "name": "DSS_HEALTH_PAYMENT_UNIQUE_VS_TOTAL_USERS",
-              "label": "DSS_HEALTH_PAYMENT_UNIQUE_VS_TOTAL_USERS",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "uniqueVsTotalUsersInBillDistrictCongo",
-                  "name": "DSS_HEALTH_UNIQUE_VS_TOTAL_USERS_IN_BILL_BURUNDI",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 4201,
-              "name": "DSS_HEALTH_ATTENDANCE_PERCENTAGE",
-              "label": "DSS_HEALTH_ATTENDANCE_PERCENTAGE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "attendanceDistrictPercentageCongo",
-                  "name": "DSS_HEALTH_ATTENDANCE_DISTRICT_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_PAYMENTS",
-          "vizArray": [
-            {
-              "id": 4202,
-              "name": "DASHBOARD_BILL_SUMMARY",
-              "label": "DASHBOARD_BILL_SUMMARY",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "billSummaryDistrict",
-                  "name": "DASHBOARD_BILL_SUMMARY",
-                  "code": "",
-                  "moduleName": "burundi-bednet",
-                  "pageName": "bill-muster-roll-district-summary",
-                  "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
                 }
@@ -2053,7 +2009,7 @@
       ]
     },
     {
-      "name": "DSS_HEALTH_OVERVIEW_DASHBOARD_BURUNDI_HEADING",
+      "name": "DSS_HEALTH_OVERVIEW_DASHBOARD_HEADING",
       "id": "district-health-dashboard",
       "isActive": "",
       "hideFilterFields": [
@@ -2078,7 +2034,7 @@
               "charts": [
                 {
                   "id": "householdVisitsWithinDateRangeCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_HOUSEHOLDS_VISITED_OVER_DATERANGE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_HOUSEHOLDS_VISITED_OVER_DATERANGE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2086,7 +2042,7 @@
                 },
                 {
                   "id": "totalVisitsCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_HOUSEHOLD_VISITS_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_HOUSEHOLD_VISITS",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2094,7 +2050,7 @@
                 },
                 {
                   "id": "householdVisitsTargetDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_DISTRICT",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2102,7 +2058,7 @@
                 },
                 {
                   "id": "totalHouseholdCoverageDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COVERAGE_HOUSEHOLD_VISITS_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COVERAGE_HOUSEHOLD_VISITS_DISTRICT",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2120,7 +2076,7 @@
               "charts": [
                 {
                   "id": "overviewPopulationCoveredCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERED_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERED",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2128,7 +2084,7 @@
                 },
                 {
                   "id": "overviewTotalPopulationCoveredCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_POPULATION_COVERED_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_POPULATION_COVERED",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2136,7 +2092,7 @@
                 },
                 {
                   "id": "overviewPopulationTargetedDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_TARGETED_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_TARGETED_DISTRICT",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2144,7 +2100,7 @@
                 },
                 {
                   "id": "overviewPopulationCoverageAchievedDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERAGE_ACHIEVED_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_POPULATION_COVERAGE_ACHIEVED_DISTRICT",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2162,7 +2118,7 @@
               "charts": [
                 {
                   "id": "distributionsByRangeCongo",
-                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTIONS_DATE_RANGE_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTIONS_DATE_RANGE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2170,7 +2126,7 @@
                 },
                 {
                   "id": "totalDistributionsTillTodayCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_DISTRIBUTED_TILL_TODAY_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_DISTRIBUTED_TILL_TODAY",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2178,7 +2134,7 @@
                 },
                 {
                   "id": "distributionTargetDistrictCongo",
-                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_TARGET_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_TARGET_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2186,7 +2142,7 @@
                 },
                 {
                   "id": "distributionCoverageDistrictCongo",
-                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_COVERAGE_PROVINCE_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_DISTRIBUTION_COVERAGE_PROVINCE",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2210,7 +2166,7 @@
               "charts": [
                 {
                   "id": "vouchersDistributedTodayOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_DISTRIBUTED_TODAY_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_DISTRIBUTED_TODAY_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2218,7 +2174,7 @@
                 },
                 {
                   "id": "totalVouchersDistributedOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_DISTRIBUTED_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_DISTRIBUTED_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2226,7 +2182,7 @@
                 },
                 {
                   "id": "vouchersRedeemedTodayOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_REDEEMED_TODAY_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_REDEEMED_TODAY_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2234,7 +2190,7 @@
                 },
                 {
                   "id": "totalVouchersRedeemedOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_REDEEMED_OVERVIEW_BURUNDI",
+                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_REDEEMED_OVERVIEW",
                   "code": "",
                   "chartType": "metric",
                   "filter": "",
@@ -2342,7 +2298,7 @@
               "charts": [
                 {
                   "id": "totalComplaintsRegisteredCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BREAKDOWN_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BREAKDOWN",
                   "code": "",
                   "chartType": "donut",
                   "filter": "",
@@ -2366,7 +2322,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageBarchartByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_HealthDistrict_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_HealthDistrict",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2390,7 +2346,7 @@
               "charts": [
                 {
                   "id": "daysInventoryStockLastsDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2408,7 +2364,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_CHECKLISTS_COMPLETION_RATE_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_CHECKLISTS_COMPLETION_RATE_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2432,7 +2388,7 @@
               "charts": [
                 {
                   "id": "registrarSyncSummaryDistrictCongo",
-                  "name": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -2456,7 +2412,7 @@
               "charts": [
                 {
                   "id": "housesVisitedBarChartMunicipalityPercentCongo",
-                  "name": "DSS_HEALTH_HOUSES_VISITED_MUNICIPALITY_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSES_VISITED_MUNICIPALITY_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2465,7 +2421,7 @@
                 },
                 {
                   "id": "housesVisitedBarChartMunicipalityCongo",
-                  "name": "DSS_HEALTH_HOUSES_VISITED_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSES_VISITED_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2484,7 +2440,7 @@
               "charts": [
                 {
                   "id": "populationCoveredBarChartMunicipalityPercentCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_MUNICIPALITY_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_MUNICIPALITY_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2493,7 +2449,7 @@
                 },
                 {
                   "id": "populationCoveredBarChartMunicipalityCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2518,7 +2474,7 @@
               "charts": [
                 {
                   "id": "closedHouseholdsMunicipalityPercentCongo",
-                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_MUNICIPALITY_PERCENTAGE_BURUNDI",
+                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_MUNICIPALITY_PERCENTAGE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2527,7 +2483,7 @@
                 },
                 {
                   "id": "closedHouseholdsMunicipalityCongo",
-                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2546,7 +2502,7 @@
               "charts": [
                 {
                   "id": "refusalCasesMunicipalityPercentCongo",
-                  "name": "DSS_HEALTH_REFUSAL_CASES_MUNICIPALITY_PERCENTAGE_BURUNDI",
+                  "name": "DSS_HEALTH_REFUSAL_CASES_MUNICIPALITY_PERCENTAGE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2555,7 +2511,7 @@
                 },
                 {
                   "id": "refusalCasesMunicipalityCongo",
-                  "name": "DSS_HEALTH_REFUSAL_CASES_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_REFUSAL_CASES_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2606,7 +2562,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -2615,7 +2571,7 @@
                 },
                 {
                   "id": "populationCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -2640,7 +2596,7 @@
               "charts": [
                 {
                   "id": "actualVsPlannedHouseholdLineGraphDistrictCongo",
-                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_HOUSEHOLD_LINE_GRAPH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_HOUSEHOLD_LINE_GRAPH_DISTRICT",
                   "code": "",
                   "chartType": "line",
                   "filter": "",
@@ -2649,7 +2605,7 @@
                 },
                 {
                   "id": "actualVsPlannedPopulationLineGraphDistrictCongo",
-                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_POPULATION_LINE_GRAPH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_POPULATION_LINE_GRAPH_DISTRICT",
                   "code": "",
                   "chartType": "line",
                   "filter": "",
@@ -2658,7 +2614,7 @@
                 },
                 {
                   "id": "actualVsPlannedBednetsLineGraphDistrictCongo",
-                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_BEDNETS_LINE_GRAPH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_BEDNETS_LINE_GRAPH_DISTRICT",
                   "code": "",
                   "chartType": "line",
                   "filter": "",
@@ -2683,7 +2639,7 @@
               "charts": [
                 {
                   "id": "registrationSummaryByMunicipalityCongo",
-                  "name": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -2692,7 +2648,7 @@
                 },
                 {
                   "id": "registrationSummaryByMunicipalityDayCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -2717,7 +2673,7 @@
               "charts": [
                 {
                   "id": "distributorSyncSummaryDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTOR_SYNC_SUMMARY_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTOR_SYNC_SUMMARY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -2741,7 +2697,7 @@
               "charts": [
                 {
                   "id": "distributionCoverageByMunicipalityPercentCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_MUNICIPALITY_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_MUNICIPALITY_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2750,7 +2706,7 @@
                 },
                 {
                   "id": "distributionCoverageByMunicipalityCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2769,7 +2725,7 @@
               "charts": [
                 {
                   "id": "populationCoveredDistributionMunicipalityPercentageCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_MUNICIPALITY_PERCENTAGE_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_MUNICIPALITY_PERCENTAGE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2778,7 +2734,7 @@
                 },
                 {
                   "id": "populationCoveredDistributionMunicipalityCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2803,7 +2759,7 @@
               "charts": [
                 {
                   "id": "bednetsDistributionCoverageMunicipalityPercentCongo",
-                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_MUNICIPALITY_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_MUNICIPALITY_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2812,7 +2768,7 @@
                 },
                 {
                   "id": "bednetsDistributionCoverageMunicipalityCongo",
-                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2831,7 +2787,7 @@
               "charts": [
                 {
                   "id": "registrationAndDistributionBarChartMunicipalityCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2855,7 +2811,7 @@
               "charts": [
                 {
                   "id": "householdsCoverageHeatMapDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -2864,7 +2820,7 @@
                 },
                 {
                   "id": "populationCoverageHeatMapDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRIBUTION_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRIBUTION_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -2873,7 +2829,7 @@
                 },
                 {
                   "id": "bednetsCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNETS_COVERAGE_HEATMAP_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNETS_COVERAGE_HEATMAP_DISTRICT",
                   "code": "",
                   "chartType": "heatmap",
                   "filter": "",
@@ -2892,7 +2848,7 @@
               "charts": [
                 {
                   "id": "distributionCoverageSpecialGroupsPercentMunicipalityCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2901,7 +2857,7 @@
                 },
                 {
                   "id": "distributionCoverageSpecialGroupsMunicipalityCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2926,7 +2882,7 @@
               "charts": [
                 {
                   "id": "distributionCoverageRefugeeCampsPercentMunicipalityCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2935,7 +2891,7 @@
                 },
                 {
                   "id": "distributionCoverageRefugeeCampsMunicipalityCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2954,7 +2910,7 @@
               "charts": [
                 {
                   "id": "bednetDistributionCoverageSpecialGroupsPercentMunicipalityCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2963,7 +2919,7 @@
                 },
                 {
                   "id": "bednetDistributionCoverageSpecialGroupsMunicipalityCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2988,7 +2944,7 @@
               "charts": [
                 {
                   "id": "bednetDistributionCoverageRefugeeCampsPercentMunicipalityCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -2997,7 +2953,7 @@
                 },
                 {
                   "id": "bednetDistributionCoverageRefugeeCampsMunicipalityCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_BURUNDI",
+                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3022,7 +2978,7 @@
               "charts": [
                 {
                   "id": "distributionSummaryByMunicipalityCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3031,7 +2987,7 @@
                 },
                 {
                   "id": "distributionSummaryByMunicipalityDayCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3108,7 +3064,7 @@
               "charts": [
                 {
                   "id": "complaintsByHealthAreaTotalCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_TOTAL_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_TOTAL",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3126,7 +3082,7 @@
               "charts": [
                 {
                   "id": "totalComplaintsRegisteredByTypeCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BY_TYPE_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS_BY_TYPE",
                   "code": "",
                   "chartType": "donut",
                   "filter": "",
@@ -3150,7 +3106,7 @@
               "charts": [
                 {
                   "id": "complaintsByStatusBreakdownHealthDistrictCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_BREAKDOWN_HEALTHDISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_BREAKDOWN_HEALTHDISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3168,7 +3124,7 @@
               "charts": [
                 {
                   "id": "complaintsByTypeBreakdownHealthDistrictCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_TYPE_BREAKDOWN_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_TYPE_BREAKDOWN_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3192,7 +3148,7 @@
               "charts": [
                 {
                   "id": "complaintsShareByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3210,7 +3166,7 @@
               "charts": [
                 {
                   "id": "averageResolutionTimeHealthDistrictCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_AVERAGE_RESOLUTION_TIME_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_AVERAGE_RESOLUTION_TIME_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3234,7 +3190,7 @@
               "charts": [
                 {
                   "id": "complaintsByStatusSummaryHealthDistrictCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3243,7 +3199,7 @@
                 },
                 {
                   "id": "complaintsByStatusSummaryDayCongo",
-                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_DAY_BURUNDI",
+                  "name": "DSS_HEALTH_COMPLAINTS_STATUS_SUMMARY_DAY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3268,7 +3224,7 @@
               "charts": [
                 {
                   "id": "openComplaintsSummaryByHealthDistrictCongo",
-                  "name": "DSS_HEALTH_OPEN_COMPLAINTS_SUMMARY_BY_HEALTH_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OPEN_COMPLAINTS_SUMMARY_BY_HEALTH_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3292,7 +3248,7 @@
               "charts": [
                 {
                   "id": "warehouseManagerUserSyncCongo",
-                  "name": "DSS_HEALTH_WAREHOUSE_MANAGER_USER_SYNC_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_WAREHOUSE_MANAGER_USER_SYNC_RATE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3316,7 +3272,7 @@
               "charts": [
                 {
                   "id": "daysInventoryStockLastsDistrictCongo",
-                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_OVERVIEW_DAYS_INVENTORY_CAN_LAST_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3334,7 +3290,7 @@
               "charts": [
                 {
                   "id": "inventoryStockInHandDistrictCongo",
-                  "name": "DSS_HEALTH_INVENTORY_STOCK_IN_HAND_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_INVENTORY_STOCK_IN_HAND_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3358,7 +3314,7 @@
               "charts": [
                 {
                   "id": "inventoryTheoreticalVsManualStockMunicipalityCongo",
-                  "name": "DSS_HEALTH_THEORETICAL_VS_MANUAL_STOCK_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_THEORETICAL_VS_MANUAL_STOCK_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3376,7 +3332,7 @@
               "charts": [
                 {
                   "id": "stockTransactionsBreakdownDistrictCongo",
-                  "name": "DSS_HEALTH_STOCK_TRANSACTIONS_DISTRICT_BURUNDI",
+                  "name": "DSS_HEALTH_STOCK_TRANSACTIONS_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3392,15 +3348,15 @@
           "vizArray": [
             {
               "id": 4003,
-              "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
-              "label": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+              "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
+              "label": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
               "vizType": "latlong",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
                   "id": "warehouseDistributionLatLongPointsDistrictCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "points",
                   "filter": "",
@@ -3408,7 +3364,7 @@
                 },
                 {
                   "id": "warehouseDistributionLatLongTableAvlRcvdDispFacilitiesDistrictCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG_BURUNDI",
+                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3432,7 +3388,7 @@
               "charts": [
                 {
                   "id": "InventorySummaryByMunicipalityCongo",
-                  "name": "DSS_HEALTH_INVENTORY_SUMMARY_BY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_INVENTORY_SUMMARY_BY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3456,7 +3412,7 @@
               "charts": [
                 {
                   "id": "supervisorUserSyncCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISOR_USER_SYNC_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISOR_USER_SYNC_RATE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3480,7 +3436,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateOfNationalSupervisorCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_NATIONAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_NATIONAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3498,7 +3454,7 @@
               "charts": [
                 {
                   "id": "userDataSyncRateCongo",
-                  "name": "DSS_HEALTH_USER_DATA_SYNC_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_USER_DATA_SYNC_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3522,7 +3478,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateOfProvincialSupervisorCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_PROVINCIAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_PROVINCIAL_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3540,7 +3496,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateOfDistrictSupervisorCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_DISTRICT_SUPERVISORS_CHECKLISTS_COMPLETION_RATE_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_DISTRICT_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3555,6 +3511,30 @@
           "name": "DSS_HEALTH_SUPERVISION",
           "vizArray": [
             {
+              "id": 4079,
+              "name": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "label": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "checklistCompletionRateOfHealthFacilitySupervisorCongo",
+                  "name": "DSS_HEALTH_SUPERVISION_HEALTH_FACILITY_SUPERVISORS_CHECKLISTS_COMPLETION_RATE",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "name": "DSS_HEALTH_SUPERVISION",
+          "vizArray": [
+            {
               "id": 4010,
               "name": "DSS_HEALTH_SUPERVISION_SUMMARY",
               "label": "DSS_HEALTH_SUPERVISION_SUMMARY",
@@ -3564,7 +3544,7 @@
               "charts": [
                 {
                   "id": "checklistCompletionRateBySupervisorsBoundarySummaryMunicipalityCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_BOUNDARY_SUMMARY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_BOUNDARY_SUMMARY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3573,7 +3553,7 @@
                 },
                 {
                   "id": "checklistCompletionRateBySupervisorsDaySummaryCongo",
-                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_DAY_SUMMARY_BURUNDI",
+                  "name": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_DAY_SUMMARY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -3598,7 +3578,7 @@
               "charts": [
                 {
                   "id": "averageBednetsDistributedMunicipalityCongo",
-                  "name": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3616,7 +3596,7 @@
               "charts": [
                 {
                   "id": "registrationAndDistributionBarChartMunicipalityCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3692,7 +3672,7 @@
               "charts": [
                 {
                   "id": "housesWithMoreThanTwentyMembersByMunicipalityCongo",
-                  "name": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3716,7 +3696,7 @@
               "charts": [
                 {
                   "id": "locationNotEnabledByMunicipalityBurunndi",
-                  "name": "DSS_HEALTH_LOCATION_NOT_ENABLED_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_LOCATION_NOT_ENABLED_MUNICIPALITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3758,7 +3738,7 @@
               "charts": [
                 {
                   "id": "incompleteRecordsByMunicipalityCongo",
-                  "name": "DSS_HEALTH_INCOMPLETE_RECORDS_BURUNDI",
+                  "name": "DSS_HEALTH_INCOMPLETE_RECORDS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3776,7 +3756,7 @@
               "charts": [
                 {
                   "id": "suspectedFraudsByMunicipalityCongo",
-                  "name": "DSS_HEALTH_SUSPECTED_FRAUDS_BURUNDI",
+                  "name": "DSS_HEALTH_SUSPECTED_FRAUDS",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -3800,77 +3780,9 @@
               "charts": [
                 {
                   "id": "dataQualitySummaryMunicipalityCongo",
-                  "name": "DSS_HEALTH_DATA_QUALITY_SUMMARY_MUNICIPALITY_BURUNDI",
+                  "name": "DSS_HEALTH_DATA_QUALITY_SUMMARY_MUNICIPALITY",
                   "code": "",
                   "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_PAYMENTS",
-          "vizArray": [
-            {
-              "id": 4300,
-              "name": "DSS_HEALTH_PAYMENT_UNIQUE_VS_TOTAL_USERS",
-              "label": "DSS_HEALTH_PAYMENT_UNIQUE_VS_TOTAL_USERS",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "uniqueVsTotalUsersInBillMunicipalityCongo",
-                  "name": "DSS_HEALTH_UNIQUE_VS_TOTAL_USERS_IN_BILL_BURUNDI",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 4301,
-              "name": "DSS_HEALTH_ATTENDANCE_PERCENTAGE",
-              "label": "DSS_HEALTH_ATTENDANCE_PERCENTAGE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "attendanceMunicipalityPercentCongo",
-                  "name": "DSS_HEALTH_ATTENDANCE_MUNICIPALITY_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_PAYMENTS",
-          "vizArray": [
-            {
-              "id": 4302,
-              "name": "DASHBOARD_BILL_SUMMARY",
-              "label": "DASHBOARD_BILL_SUMMARY",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "billSummaryMunicipality",
-                  "name": "DASHBOARD_BILL_SUMMARY",
-                  "code": "",
-                  "moduleName": "burundi-bednet",
-                  "pageName": "bill-muster-roll-municipality-summary",
-                  "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
                 }
