@@ -1971,9 +1971,9 @@
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Field Supervisors Count"
+          "Health Facility Supervisors Count"
         ],
-        "newField": "Field Supervisors Checklist Fill Rate",
+        "newField": "Health Facility Supervisors Checklist Fill Rate",
         "_comments": ""
       }
     ],
@@ -2046,9 +2046,9 @@
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Field Supervisors Count"
+          "Health Facility Supervisors Count"
         ],
-        "newField": "Field Supervisors Checklist Fill Rate",
+        "newField": "Health Facility Supervisors Checklist Fill Rate",
         "_comments": ""
       }
     ],
@@ -2121,9 +2121,9 @@
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Field Supervisors Count"
+          "Health Facility Supervisors Count"
         ],
-        "newField": "Field Supervisors Checklist Fill Rate",
+        "newField": "Health Facility Supervisors Checklist Fill Rate",
         "_comments": ""
       }
     ],
@@ -2189,9 +2189,9 @@
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Field Supervisors Count"
+          "Health Facility Supervisors Count"
         ],
-        "newField": "Field Supervisors Checklist Fill Rate",
+        "newField": "Health Facility Supervisors Checklist Fill Rate",
         "_comments": ""
       }
     ],
