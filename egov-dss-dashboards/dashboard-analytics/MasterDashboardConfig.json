@@ -1331,7 +1331,7 @@
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "ComplaintsShareByHealthDistrictCongo",
+                  "id": "complaintsShareByHealthDistrictCongo",
                   "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_BURUNDI",
                   "code": "",
                   "chartType": "bar",
@@ -3107,7 +3107,7 @@
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "complaintsByMunicipalityTotalCongo",
+                  "id": "complaintsByHealthAreaTotalCongo",
                   "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_TOTAL_BURUNDI",
                   "code": "",
                   "chartType": "bar",
@@ -3191,7 +3191,7 @@
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "ComplaintsShareByHealthDistrictCongo",
+                  "id": "complaintsShareByHealthDistrictCongo",
                   "name": "DSS_HEALTH_COMPLAINTS_BY_HEALTH_DISTRICT_BURUNDI",
                   "code": "",
                   "chartType": "bar",
