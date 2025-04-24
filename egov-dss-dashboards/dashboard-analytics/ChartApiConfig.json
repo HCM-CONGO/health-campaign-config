@@ -1590,7 +1590,7 @@
     "documentType": "_doc",
     "action": "",
     "showFooter": true,
-    "plotLabel": "Open complaints AreaOfResponsibility",
+    "plotLabel": "Village",
     "excludedColumns": [],
     "hideInsights": true,
     "hideHeaderDenomination": true,
