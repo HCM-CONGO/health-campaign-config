@@ -309,141 +309,27 @@
           ]
         },
         {
-          "row": 2,
-          "name": "DSS_HEALTH_OVERVIEW",
-          "vizArray": [
-            {
-              "id": 3061,
-              "name": "DSS_HEALTH_VOUCHERS_SCANNED",
-              "label": "DSS_HEALTH_VOUCHERS_SCANNED",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "vouchersDistributedTodayOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_DISTRIBUTED_TODAY_OVERVIEW",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalVouchersDistributedOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_DISTRIBUTED_OVERVIEW",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "vouchersRedeemedTodayOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_VOUCHERS_REDEEMED_TODAY_OVERVIEW",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalVouchersRedeemedOverviewCongo",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_VOUCHERS_REDEEMED_OVERVIEW",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 3066,
-              "name": "DSS_HEALTH_NATIONAL_SPECIAL_GROUPS",
-              "label": "DSS_HEALTH_NATIONAL_SPECIAL_GROUPS",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "totalSpecialGroups",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_SPECIAL_GROUPS",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalSpecialGroupsDistributions",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_SPECIAL_GROUPS_DISTRIBUTION",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 3067,
-              "name": "DSS_HEALTH_REFUGEE_CAMPS",
-              "label": "DSS_HEALTH_REFUGEE_CAMPS",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "totalRefugeeCamps",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_REFUGEE_CAMPS",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalHHRegisteredUnderRefugeeCamps",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_HH_IN_REFUGEE_CAMPS",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalPopulationRegisteredUnderRefugeeCamps",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_POPULATION_IN_REFUGEE_CAMPS",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalRefugeeCampsDistributions",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_REFUGEE_CAMPS_DISTRIBUTION",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalRefugeeCampsPopulationWithBednets",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_REFUGEE_CAMPS_POPULATION_WITH_NETS",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "totalBednetsDistributedToRefugeeCamps",
-                  "name": "DSS_HEALTH_NATIONAL_TOTAL_BEDNETS_DISTRIBUTED_TO_REFUGEE_CAMPS",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "row": 3,
           "name": "DSS_HEALTH_OVERVIEW",
           "vizArray": [
+            {
+              "id": 204,
+              "name": "DSS_HEALTH_HOUSEHOLDS_NOT_DELIVERED",
+              "label": "DSS_HEALTH_HOUSEHOLDS_NOT_DELIVERED",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "totalHouseholdsNotDeliveredProvinceCongo",
+                  "name": "DSS_HEALTH_OVERVIEW_TOTAL_HOUSEHOLDS_NOT_DELIVERED_PROVINCE",
+                  "code": "",
+                  "chartType": "donut",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
             {
               "id": 3062,
               "name": "DSS_HEALTH_OVERVIEW_TOTAL_COMPLAINTS",
