@@ -743,7 +743,7 @@
   },
   "householdsCoverageBarchartByHealthAreaCongo": {
     "kind": "drillDown",
-    "chartName": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_Municipality",
+    "chartName": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_HealthArea",
     "queries": [
       {
         "module": "COMMON",
@@ -795,7 +795,7 @@
   },
   "householdsCoverageBarchartByVillageCongo": {
     "kind": "drillDown",
-    "chartName": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_AreaOfResponsibility",
+    "chartName": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_BAR_CHART_BY_Village",
     "queries": [
       {
         "module": "COMMON",
@@ -1578,7 +1578,7 @@
         "dateRefField": "",
         "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
         "indexName": "transformer-pgr-services",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Open filter by Municipality\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"PENDING_ASSIGNMENT\"}}]}},\"aggs\":{\"Open Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Open Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Resolved filter by Municipality\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"RESOLVED\"}}]}},\"aggs\":{\"Resolved Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Resolved Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Rejected filter by healthArea\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"REJECTED\"}}]}},\"aggs\":{\"Rejected Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Rejected Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Open filter by HealthArea\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"PENDING_ASSIGNMENT\"}}]}},\"aggs\":{\"Open Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Open Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Resolved filter by HealthArea\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"RESOLVED\"}}]}},\"aggs\":{\"Resolved Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Resolved Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Rejected filter by healthArea\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"REJECTED\"}}]}},\"aggs\":{\"Rejected Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Rejected Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}}}}"
       }
     ],
     "filterKeys": [
@@ -1654,7 +1654,7 @@
         "dateRefField": "",
         "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
         "indexName": "transformer-pgr-services",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Open filter by AreaOfResponsibility\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"PENDING_ASSIGNMENT\"}}]}},\"aggs\":{\"Open Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Open Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Resolved filter by AreaOfResponsibility\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"RESOLVED\"}}]}},\"aggs\":{\"Resolved Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Resolved Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Rejected filter by AreaOfResponsibility\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"REJECTED\"}}]}},\"aggs\":{\"Rejected Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Rejected Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Open filter by Village\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"PENDING_ASSIGNMENT\"}}]}},\"aggs\":{\"Open Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Open Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Resolved filter by Village\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"RESOLVED\"}}]}},\"aggs\":{\"Resolved Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Resolved Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}},\"Rejected filter by Village\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.service.applicationStatus.keyword\":\"REJECTED\"}}]}},\"aggs\":{\"Rejected Complaints\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Rejected Complaints Count\":{\"value_count\":{\"field\":\"Data.service.auditDetails.lastModifiedTime\"}}}}}}}}"
       }
     ],
     "filterKeys": [
@@ -1929,7 +1929,7 @@
   },
   "openComplaintsSummaryByVillageCongo": {
     "kind": "drillDown",
-    "chartName": "DSS_HEALTH_OPEN_COMPLAINTS_SUMMARY_BY_AreaOfResponsibility",
+    "chartName": "DSS_HEALTH_OPEN_COMPLAINTS_SUMMARY_BY_Village",
     "queries": [
       {
         "module": "COMMON",
@@ -2419,7 +2419,7 @@
   },
   "checklistCompletionRateBySupervisorsBoundarySummaryVillageCongo": {
     "kind": "drillDown",
-    "chartName": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_BOUNDARY_SUMMARY_AreaOfResponsibility",
+    "chartName": "DSS_HEALTH_SUPERVISION_SUPERVISORS_CHECKLISTS_BOUNDARY_SUMMARY_Village",
     "queries": [
       {
         "module": "COMMON",
@@ -2837,7 +2837,7 @@
     ],
     "chartType": "xtable",
     "valueType": "number",
-    "drillChart": "inventorySummaryByMunicipalityCongo",
+    "drillChart": "inventorySummaryByHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "plotLabel": "Inventory summary By District",
@@ -2922,7 +2922,7 @@
     "sort": "sortKeyAsc",
     "_comment": " "
   },
-  "inventorySummaryByMunicipalityCongo": {
+  "inventorySummaryByHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_INVENTORY_SUMMARY_BY_MUNICIPALITY",
     "queries": [
@@ -2967,11 +2967,11 @@
     "drillChart": "none",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "Inventory summary By Municipality",
+    "plotLabel": "Inventory summary By HealthArea",
     "filterKeys": [
       {
         "key": "healthArea",
-        "column": "Inventory summary By Municipality"
+        "column": "Inventory summary By HealthArea"
       }
     ],
     "divisorFields": [],
@@ -3086,7 +3086,7 @@
     "insight": {},
     "_comment": " "
   },
-  "inventoryTheoreticalVsManualStockMunicipalityCongo": {
+  "inventoryTheoreticalVsManualStockHealthAreaCongo": {
     "chartName": "DSS_HEALTH_THEORETICAL_VS_MANUAL_STOCK_MUNICIPALITY",
     "queries": [
       {
@@ -3123,8 +3123,806 @@
     "insight": {},
     "_comment": " "
   },
-
-
+  "housesWithMoreThanTwentyMembersByHealthDistrictCongo": {
+    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_HEALTH_DISTRICT",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "housesWithMoreThanTwentyMembersByHealthAreaCongo",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Household with more than 20 members"
+    ],
+    "filterKeys": [
+      {
+        "key": "district"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "housesWithMoreThanTwentyMembersByHealthAreaCongo": {
+    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_MUNICIPALITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "housesWithMoreThanTwentyMembersByVillageCongo",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Household with more than 20 members"
+    ],
+    "filterKeys": [
+      {
+        "key": "healthArea"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "housesWithMoreThanTwentyMembersByVillageCongo": {
+    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_AREA_OF_RESPONSIBILITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Household with more than 20 members"
+    ],
+    "filterKeys": [
+      {
+        "key": "village"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "locationNotEnabledByHealthDistrictCongo": {
+    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_HEALTH_DISTRICT",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "locationNotEnabledByHealthAreaCongo",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Location Not Enabled"
+    ],
+    "filterKeys": [
+      {
+        "key": "district"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "locationNotEnabledByHealthAreaCongo": {
+    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_MUNICIPALITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "locationNotEnabledByVillageCongo",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Location Not Enabled"
+    ],
+    "filterKeys": [
+      {
+        "key": "healthArea"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "locationNotEnabledByVillageCongo": {
+    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_AREA_OF_RESPONSIBILITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Location Not Enabled"
+    ],
+    "filterKeys": [
+      {
+        "key": "village"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "incompleteRecordsByHealthDistrictCongo": {
+    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "incompleteRecordsByHealthAreaCongo",
+    "documentType": "_doc",
+    "action": "",
+    "filterKeys": [
+      {
+        "key": "district"
+      }
+    ],
+    "plotLabel": "Incomplete record",
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "SumComputedField",
+        "fields": [
+          "Total Houses Registered",
+          "Total Houses Visited"
+        ],
+        "newField": "Incomplete Houses",
+        "_comments": ""
+      }
+    ],
+    "aggregationPaths": [
+      "Total Houses Registered",
+      "Total Houses Visited"
+    ],
+    "sort": "sortKeyAsc",
+    "computeMultiPaths": true,
+    "insight": {},
+    "_comment": " "
+  },
+  "incompleteRecordsByHealthAreaCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.healthArea\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "incompleteRecordsByVillageCongo",
+    "documentType": "_doc",
+    "action": "",
+    "filterKeys": [
+      {
+        "key": "healthArea"
+      }
+    ],
+    "plotLabel": "Incomplete record",
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "SumComputedField",
+        "fields": [
+          "Total Houses Registered",
+          "Total Houses Visited"
+        ],
+        "newField": "Incomplete Houses",
+        "_comments": ""
+      }
+    ],
+    "aggregationPaths": [
+      "Total Houses Registered",
+      "Total Houses Visited"
+    ],
+    "sort": "sortKeyAsc",
+    "computeMultiPaths": true,
+    "insight": {},
+    "_comment": " "
+  },
+  "incompleteRecordsByVillageCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.village\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.createdTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "filterKeys": [
+      {
+        "key": "village"
+      }
+    ],
+    "plotLabel": "Incomplete record",
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "SumComputedField",
+        "fields": [
+          "Total Houses Registered",
+          "Total Houses Visited"
+        ],
+        "newField": "Incomplete Houses",
+        "_comments": ""
+      }
+    ],
+    "aggregationPaths": [
+      "Total Houses Registered",
+      "Total Houses Visited"
+    ],
+    "sort": "sortKeyAsc",
+    "computeMultiPaths": true,
+    "insight": {},
+    "_comment": " "
+  },
+  "entriesDoneByWMsHealthDistrictCongo": {
+    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_HEALTH_DISTRICT",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "stock-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "plotLabel": "none",
+    "chartType": "line",
+    "valueType": "number",
+    "drillChart": "none",
+    "isCumulative": false,
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "WM Stock Entries"
+    ],
+    "insight": {},
+    "_comment": " ",
+    "filterKeys": [
+      {
+        "key": "district"
+      }
+    ]
+  },
+  "entriesDoneByWMsHealthAreaCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_MUNICIPALITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "stock-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "plotLabel": "none",
+    "chartType": "line",
+    "valueType": "number",
+    "drillChart": "none",
+    "isCumulative": false,
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "WM Stock Entries"
+    ],
+    "insight": {},
+    "_comment": " ",
+    "filterKeys": [
+      {
+        "key": "healthArea"
+      }
+    ]
+  },
+  "suspectedFraudsByHealthDistrictCongo": {
+    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "suspectedFraudsByHealthAreaCongo",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Suspected Frauds"
+    ],
+    "filterKeys": [
+      {
+        "key": "district"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "suspectedFraudsByHealthAreaCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "suspectedFraudsByVillageCongo",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Suspected Frauds"
+    ],
+    "filterKeys": [
+      {
+        "key": "healthArea"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "suspectedFraudsByVillageCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Suspected Frauds"
+    ],
+    "filterKeys": [
+      {
+        "key": "village"
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "dataQualitySummaryDistrictCongo": {
+    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_DISTRICT",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "stock-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
+      }
+    ],
+    "filterKeys": [
+      {
+        "key": "district",
+        "column": "HealthDistrict"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "dataQualitySummaryHealthAreaCongo",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "HealthDistrict",
+    "excludedColumns": [
+      "Household with more than 20 members count",
+      "Location not enabled count",
+      "WHM Stock Entries count",
+      "total_users_registered_more_than_15",
+      "Total Houses Registered count",
+      "negative_households_visited_count"
+    ],
+    "excludedBucketKeys": [
+      "daily_users"
+    ],
+    "hideInsights": true,
+    "showFooter": true,
+    "hideHeaderDenomination": true,
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Household with more than 20 members count"
+        ],
+        "newField": "Household with more than 20 members",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Location not enabled count"
+        ],
+        "newField": "Location not enabled",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "WHM Stock Entries count"
+        ],
+        "newField": "WHM Stock Entries",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Total Houses Registered count",
+          "negative_households_visited_count"
+        ],
+        "newField": "Households not sprayed",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "total_users_registered_more_than_15"
+        ],
+        "newField": "Suspected Frauds",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "sort": "sortKeyAsc",
+    "_comment": " "
+  },
+  "dataQualitySummaryHealthAreaCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_MUNICIPALITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "stock-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.healthArea\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
+      }
+    ],
+    "filterKeys": [
+      {
+        "key": "healthArea",
+        "column": "HealthArea"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "dataQualitySummaryVillageCongo",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "HealthArea",
+    "excludedColumns": [
+      "Household with more than 20 members count",
+      "Location not enabled count",
+      "WHM Stock Entries count",
+      "total_users_registered_more_than_15",
+      "Total Houses Registered count",
+      "negative_households_visited_count"
+    ],
+    "excludedBucketKeys": [
+      "daily_users"
+    ],
+    "hideInsights": true,
+    "showFooter": true,
+    "hideHeaderDenomination": true,
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Household with more than 20 members count"
+        ],
+        "newField": "Household With More Than 20 Members Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Location not enabled count"
+        ],
+        "newField": "Location Not Enabled Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "WHM Stock Entries count"
+        ],
+        "newField": "WHM Stock Entries Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Total Houses Registered count",
+          "negative_households_visited_count"
+        ],
+        "newField": "Households Not Sprayed Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "total_users_registered_more_than_15"
+        ],
+        "newField": "Suspected Frauds Count",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "sort": "sortKeyAsc",
+    "_comment": " "
+  },
+  "dataQualitySummaryVillageCongo": {
+    "kind": "drillDown",
+    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_AREA_OF_RESPONSIBILITY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "stock-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.village\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
+        "indexName": "project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
+        "indexName": "household-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
+      }
+    ],
+    "filterKeys": [
+      {
+        "key": "village",
+        "column": "Village"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Village",
+    "excludedColumns": [
+      "Household with more than 20 members count",
+      "Location not enabled count",
+      "WHM Stock Entries count",
+      "total_users_registered_more_than_15",
+      "Total Houses Registered count",
+      "negative_households_visited_count"
+    ],
+    "excludedBucketKeys": [
+      "daily_users"
+    ],
+    "hideInsights": true,
+    "showFooter": true,
+    "hideHeaderDenomination": true,
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Household with more than 20 members count"
+        ],
+        "newField": "Household With More Than 20 Members Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Location not enabled count"
+        ],
+        "newField": "Location Not Enabled Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "WHM Stock Entries count"
+        ],
+        "newField": "WHM Stock Entries Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Total Houses Registered count",
+          "negative_households_visited_count"
+        ],
+        "newField": "Households Not Sprayed Count",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "total_users_registered_more_than_15"
+        ],
+        "newField": "Suspected Frauds Count",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "sort": "sortKeyAsc",
+    "_comment": " "
+  },
 
 
 
@@ -3237,286 +4035,6 @@
       "colorCode": "#228B22",
       "insightInterval": "dateRange"
     },
-    "_comment": " "
-  },
-  "housesWithMoreThanTwentyMembersByHealthDistrictCongo": {
-    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_HEALTH_DISTRICT",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "housesWithMoreThanTwentyMembersByMunicipalityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Household with more than 20 members"
-    ],
-    "filterKeys": [
-      {
-        "key": "district"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "housesWithMoreThanTwentyMembersByMunicipalityCongo": {
-    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_MUNICIPALITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "housesWithMoreThanTwentyMembersByAreaOfResponsibilityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Household with more than 20 members"
-    ],
-    "filterKeys": [
-      {
-        "key": "healthArea"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "housesWithMoreThanTwentyMembersByAreaOfResponsibilityCongo": {
-    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_AREA_OF_RESPONSIBILITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "housesWithMoreThanTwentyMembersByHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Household with more than 20 members"
-    ],
-    "filterKeys": [
-      {
-        "key": "village"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "housesWithMoreThanTwentyMembersByHillsCongo": {
-    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "housesWithMoreThanTwentyMembersBySubHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Household with more than 20 members"
-    ],
-    "filterKeys": [
-      {
-        "key": "hills"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "housesWithMoreThanTwentyMembersBySubHillsCongo": {
-    "chartName": "DSS_HOUSE_WITH_MORE_THAN_TWENTY_MEMBERS_SUB_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Household with more than 20 members\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":1000},\"aggs\":{\"Count\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Household with more than 20 members"
-    ],
-    "filterKeys": [
-      {
-        "key": "subHills"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "locationNotEnabledByHealthDistrictCongo": {
-    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_HEALTH_DISTRICT",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "locationNotEnabledByMunicipalityBurunndi",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Location Not Enabled"
-    ],
-    "filterKeys": [
-      {
-        "key": "district"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "locationNotEnabledByMunicipalityBurunndi": {
-    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_MUNICIPALITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "locationNotEnabledByAreaOfResponsibilityBurunndi",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Location Not Enabled"
-    ],
-    "filterKeys": [
-      {
-        "key": "healthArea"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "locationNotEnabledByAreaOfResponsibilityBurunndi": {
-    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_AREA_OF_RESPONSIBILITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "locationNotEnabledByHillsBurunndi",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Location Not Enabled"
-    ],
-    "filterKeys": [
-      {
-        "key": "village"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "locationNotEnabledByHillsBurunndi": {
-    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "locationNotEnabledBySubHillsBurunndi",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Location Not Enabled"
-    ],
-    "filterKeys": [
-      {
-        "key": "hills"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "locationNotEnabledBySubHillsBurunndi": {
-    "chartName": "DSS_HEALTH_LOCATION_NOT_ENABLED_SUB_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"Data.geoPoint\"}},{\"term\":{\"Data.additionalDetails.status.keyword\":\"CLOSED_HOUSEHOLD\"}}]}},\"aggs\":{\"Location Not Enabled\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Location Not Enabled"
-    ],
-    "filterKeys": [
-      {
-        "key": "subHills"
-      }
-    ],
-    "insight": {},
     "_comment": " "
   },
   "totalVouchersDistributedOverviewCongo": {
@@ -3640,414 +4158,6 @@
       "insightInterval": "dateRange"
     },
     "_comment": " "
-  },
-  "incompleteRecordsByHealthDistrictCongo": {
-    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "incompleteRecordsByMunicipalityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "filterKeys": [
-      {
-        "key": "district"
-      }
-    ],
-    "plotLabel": "Incomplete record",
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "SumComputedField",
-        "fields": [
-          "Total Houses Registered",
-          "Total Houses Visited"
-        ],
-        "newField": "Incomplete Houses",
-        "_comments": ""
-      }
-    ],
-    "aggregationPaths": [
-      "Total Houses Registered",
-      "Total Houses Visited"
-    ],
-    "sort": "sortKeyAsc",
-    "computeMultiPaths": true,
-    "insight": {},
-    "_comment": " "
-  },
-  "incompleteRecordsByMunicipalityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.healthArea\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "incompleteRecordsByAreaOfResponsibilityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "filterKeys": [
-      {
-        "key": "healthArea"
-      }
-    ],
-    "plotLabel": "Incomplete record",
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "SumComputedField",
-        "fields": [
-          "Total Houses Registered",
-          "Total Houses Visited"
-        ],
-        "newField": "Incomplete Houses",
-        "_comments": ""
-      }
-    ],
-    "aggregationPaths": [
-      "Total Houses Registered",
-      "Total Houses Visited"
-    ],
-    "sort": "sortKeyAsc",
-    "computeMultiPaths": true,
-    "insight": {},
-    "_comment": " "
-  },
-  "incompleteRecordsByAreaOfResponsibilityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.village\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "incompleteRecordsByHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "filterKeys": [
-      {
-        "key": "village"
-      }
-    ],
-    "plotLabel": "Incomplete record",
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "SumComputedField",
-        "fields": [
-          "Total Houses Registered",
-          "Total Houses Visited"
-        ],
-        "newField": "Incomplete Houses",
-        "_comments": ""
-      }
-    ],
-    "aggregationPaths": [
-      "Total Houses Registered",
-      "Total Houses Visited"
-    ],
-    "sort": "sortKeyAsc",
-    "computeMultiPaths": true,
-    "insight": {},
-    "_comment": " "
-  },
-  "incompleteRecordsByHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.hills\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "incompleteRecordsBySubHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "filterKeys": [
-      {
-        "key": "hills"
-      }
-    ],
-    "plotLabel": "Incomplete record",
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "SumComputedField",
-        "fields": [
-          "Total Houses Registered",
-          "Total Houses Visited"
-        ],
-        "newField": "Incomplete Houses",
-        "_comments": ""
-      }
-    ],
-    "aggregationPaths": [
-      "Total Houses Registered",
-      "Total Houses Visited"
-    ],
-    "sort": "sortKeyAsc",
-    "computeMultiPaths": true,
-    "insight": {},
-    "_comment": " "
-  },
-  "incompleteRecordsBySubHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_INCOMPLETE_RECORDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.subHills\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":500},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":500},\"aggs\":{\"NegativeHouseholdsSprayDetailsRecorded\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "filterKeys": [
-      {
-        "key": "subHills"
-      }
-    ],
-    "plotLabel": "Incomplete record",
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "SumComputedField",
-        "fields": [
-          "Total Houses Registered",
-          "Total Houses Visited"
-        ],
-        "newField": "Incomplete Houses",
-        "_comments": ""
-      }
-    ],
-    "aggregationPaths": [
-      "Total Houses Registered",
-      "Total Houses Visited"
-    ],
-    "sort": "sortKeyAsc",
-    "computeMultiPaths": true,
-    "insight": {},
-    "_comment": " "
-  },
-  "entriesDoneByWMsHealthDistrictCongo": {
-    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_HEALTH_DISTRICT",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "plotLabel": "none",
-    "chartType": "line",
-    "valueType": "number",
-    "drillChart": "none",
-    "isCumulative": false,
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "WM Stock Entries"
-    ],
-    "insight": {},
-    "_comment": " ",
-    "filterKeys": [
-      {
-        "key": "district"
-      }
-    ]
-  },
-  "entriesDoneByWMsMunicipalityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_MUNICIPALITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "plotLabel": "none",
-    "chartType": "line",
-    "valueType": "number",
-    "drillChart": "none",
-    "isCumulative": false,
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "WM Stock Entries"
-    ],
-    "insight": {},
-    "_comment": " ",
-    "filterKeys": [
-      {
-        "key": "healthArea"
-      }
-    ]
-  },
-  "entriesDoneByWMsAreaOfResponsibilityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_AREA_OF_RESPONSIBILITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "plotLabel": "none",
-    "chartType": "line",
-    "valueType": "number",
-    "drillChart": "none",
-    "isCumulative": false,
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "WM Stock Entries"
-    ],
-    "insight": {},
-    "_comment": " ",
-    "filterKeys": [
-      {
-        "key": "village"
-      }
-    ]
-  },
-  "entriesDoneByWMsHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "plotLabel": "none",
-    "chartType": "line",
-    "valueType": "number",
-    "drillChart": "none",
-    "isCumulative": false,
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "WM Stock Entries"
-    ],
-    "insight": {},
-    "_comment": " ",
-    "filterKeys": [
-      {
-        "key": "hills"
-      }
-    ]
-  },
-  "entriesDoneByWMsSubHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_ENTRIES_DONE_BY_WMS_SUBHILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\"},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      }
-    ],
-    "plotLabel": "none",
-    "chartType": "line",
-    "valueType": "number",
-    "drillChart": "none",
-    "isCumulative": false,
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "WM Stock Entries"
-    ],
-    "insight": {},
-    "_comment": " ",
-    "filterKeys": [
-      {
-        "key": "subHills"
-      }
-    ]
   },
   "householdVisitsTargetDistrictCongo": {
     "chartName": "DSS_HEALTH_OVERVIEW_TARGET_HOUSEHOLD_VISITS_DISTRICT",
@@ -4237,704 +4347,7 @@
     },
     "_comment": " "
   },
-  "suspectedFraudsByHealthDistrictCongo": {
-    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "suspectedFraudsByMunicipalityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Suspected Frauds"
-    ],
-    "filterKeys": [
-      {
-        "key": "district"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "suspectedFraudsByMunicipalityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "suspectedFraudsByAreaOfResponsibilityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Suspected Frauds"
-    ],
-    "filterKeys": [
-      {
-        "key": "healthArea"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "suspectedFraudsByAreaOfResponsibilityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "suspectedFraudsByHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Suspected Frauds"
-    ],
-    "filterKeys": [
-      {
-        "key": "village"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "suspectedFraudsByHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "suspectedFraudsBySubHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Suspected Frauds"
-    ],
-    "filterKeys": [
-      {
-        "key": "hills"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "suspectedFraudsBySubHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_SUSPECTED_FRAUDS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "Data.household.clientAuditDetails.lastModifiedTime",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_sprayed_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "chartType": "line",
-    "isCumulative": false,
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "aggregationPaths": [
-      "Suspected Frauds"
-    ],
-    "filterKeys": [
-      {
-        "key": "subHills"
-      }
-    ],
-    "insight": {},
-    "_comment": " "
-  },
-  "dataQualitySummaryDistrictCongo": {
-    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_DISTRICT",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.district\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "filterKeys": [
-      {
-        "key": "district",
-        "column": "HealthDistricts"
-      }
-    ],
-    "chartType": "xtable",
-    "valueType": "number",
-    "drillChart": "dataQualitySummaryMunicipalityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "plotLabel": "HealthDistricts",
-    "excludedColumns": [
-      "Household with more than 20 members count",
-      "Location not enabled count",
-      "WHM Stock Entries count",
-      "total_users_registered_more_than_15",
-      "Total Houses Registered count",
-      "negative_households_visited_count"
-    ],
-    "excludedBucketKeys": [
-      "daily_users"
-    ],
-    "hideInsights": true,
-    "showFooter": true,
-    "hideHeaderDenomination": true,
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Household with more than 20 members count"
-        ],
-        "newField": "Household with more than 20 members",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Location not enabled count"
-        ],
-        "newField": "Location not enabled",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "WHM Stock Entries count"
-        ],
-        "newField": "WHM Stock Entries",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Total Houses Registered count",
-          "negative_households_visited_count"
-        ],
-        "newField": "Households not sprayed",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "total_users_registered_more_than_15"
-        ],
-        "newField": "Suspected Frauds",
-        "_comments": ""
-      }
-    ],
-    "insight": {},
-    "sort": "sortKeyAsc",
-    "_comment": " "
-  },
-  "dataQualitySummaryMunicipalityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_MUNICIPALITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.healthArea\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthArea.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "filterKeys": [
-      {
-        "key": "healthArea",
-        "column": "Municipality"
-      }
-    ],
-    "chartType": "xtable",
-    "valueType": "number",
-    "drillChart": "dataQualitySummaryAreaOfResponsibilityCongo",
-    "documentType": "_doc",
-    "action": "",
-    "plotLabel": "Municipality",
-    "excludedColumns": [
-      "Household with more than 20 members count",
-      "Location not enabled count",
-      "WHM Stock Entries count",
-      "total_users_registered_more_than_15",
-      "Total Houses Registered count",
-      "negative_households_visited_count"
-    ],
-    "excludedBucketKeys": [
-      "daily_users"
-    ],
-    "hideInsights": true,
-    "showFooter": true,
-    "hideHeaderDenomination": true,
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Household with more than 20 members count"
-        ],
-        "newField": "Household With More Than 20 Members Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Location not enabled count"
-        ],
-        "newField": "Location Not Enabled Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "WHM Stock Entries count"
-        ],
-        "newField": "WHM Stock Entries Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Total Houses Registered count",
-          "negative_households_visited_count"
-        ],
-        "newField": "Households Not Sprayed Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "total_users_registered_more_than_15"
-        ],
-        "newField": "Suspected Frauds Count",
-        "_comments": ""
-      }
-    ],
-    "insight": {},
-    "sort": "sortKeyAsc",
-    "_comment": " "
-  },
-  "dataQualitySummaryAreaOfResponsibilityCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_AREA_OF_RESPONSIBILITY",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.village\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "filterKeys": [
-      {
-        "key": "village",
-        "column": "AreaOfResponsibility"
-      }
-    ],
-    "chartType": "xtable",
-    "valueType": "number",
-    "drillChart": "dataQualitySummaryHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "plotLabel": "AreaOfResponsibility",
-    "excludedColumns": [
-      "Household with more than 20 members count",
-      "Location not enabled count",
-      "WHM Stock Entries count",
-      "total_users_registered_more_than_15",
-      "Total Houses Registered count",
-      "negative_households_visited_count"
-    ],
-    "excludedBucketKeys": [
-      "daily_users"
-    ],
-    "hideInsights": true,
-    "showFooter": true,
-    "hideHeaderDenomination": true,
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Household with more than 20 members count"
-        ],
-        "newField": "Household With More Than 20 Members Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Location not enabled count"
-        ],
-        "newField": "Location Not Enabled Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "WHM Stock Entries count"
-        ],
-        "newField": "WHM Stock Entries Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Total Houses Registered count",
-          "negative_households_visited_count"
-        ],
-        "newField": "Households Not Sprayed Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "total_users_registered_more_than_15"
-        ],
-        "newField": "Suspected Frauds Count",
-        "_comments": ""
-      }
-    ],
-    "insight": {},
-    "sort": "sortKeyAsc",
-    "_comment": " "
-  },
-  "dataQualitySummaryHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.hills\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.hills.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "filterKeys": [
-      {
-        "key": "hills",
-        "column": "Hills"
-      }
-    ],
-    "chartType": "xtable",
-    "valueType": "number",
-    "drillChart": "dataQualitySummarySubHillsCongo",
-    "documentType": "_doc",
-    "action": "",
-    "plotLabel": "Hills",
-    "excludedColumns": [
-      "Household with more than 20 members count",
-      "Location not enabled count",
-      "WHM Stock Entries count",
-      "total_users_registered_more_than_15",
-      "Total Houses Registered count",
-      "negative_households_visited_count"
-    ],
-    "excludedBucketKeys": [
-      "daily_users"
-    ],
-    "hideInsights": true,
-    "showFooter": true,
-    "hideHeaderDenomination": true,
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Household with more than 20 members count"
-        ],
-        "newField": "Household With More Than 20 Members Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Location not enabled count"
-        ],
-        "newField": "Location Not Enabled Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "WHM Stock Entries count"
-        ],
-        "newField": "WHM Stock Entries Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Total Houses Registered count",
-          "negative_households_visited_count"
-        ],
-        "newField": "Households Not Sprayed Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "total_users_registered_more_than_15"
-        ],
-        "newField": "Suspected Frauds Count",
-        "_comments": ""
-      }
-    ],
-    "insight": {},
-    "sort": "sortKeyAsc",
-    "_comment": " "
-  },
-  "dataQualitySummarySubHillsCongo": {
-    "kind": "drillDown",
-    "chartName": "DSS_HEALTH_DATA_QUALITY_SUMMARY_SUB_HILLS",
-    "queries": [
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "stock-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.role.keyword\":{\"value\":\"WAREHOUSE_MANAGER\"}}}]}},\"aggs\":{\"WM Stock Entries\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\"},\"aggs\":{\"WHM Stock Entries count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.subHills\"}}]}},\"aggs\":{\"Total Houses Registered\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":1000},\"aggs\":{\"Total Houses Registered count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}},\"Household with more than 20 members\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.household.memberCount\":{\"gt\":20}}}]}},\"aggs\":{\"Household by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":1000},\"aggs\":{\"Household with more than 20 members count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}},\"Location not enabled\":{\"filter\":{\"bool\":{\"must_not\":{\"exists\":{\"field\":\"Data.geoPoint\"}}}},\"aggs\":{\"Location not enabled by district\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":1000},\"aggs\":{\"Location not enabled count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
-        "indexName": "project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveredTo.keyword\":\"HOUSEHOLD\"}},{\"terms\":{\"Data.administrationStatus.keyword\":[\"ADMINISTRATION_SUCCESS\",\"CLOSED_HOUSEHOLD\"]}}]}},\"aggs\":{\"Total Houses Visited\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":500},\"aggs\":{\"negative_households_visited_count\":{\"scripted_metric\":{\"params\":{\"fieldName\":\"Data.householdId.keyword\"},\"init_script\":\"state.list = []\",\"map_script\":\"if(doc[params.fieldName].size() > 0) \\nstate.list.add(doc[params.fieldName].value);\",\"combine_script\":\"return state.list;\",\"reduce_script\":\"Map uniqueValueMap = new HashMap(); \\n        int count = 0;\\n        for(shardList in states) {\\n          if(shardList != null) { \\n            for(key in shardList) {\\n              if(!uniqueValueMap.containsKey(key)) {\\n                count +=1;\\n                uniqueValueMap.put(key, key);\\n              }\\n            }\\n          }\\n        } \\n        return count * -1;\"}}}}}}}}"
-      },
-      {
-        "module": "COMMON",
-        "dateRefField": "",
-        "requestQueryMap": "{\"department\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"village\": \"Data.boundaryHierarchy.village.keyword\", \"projectTypeId\": \"Data.additionalDetails.projectTypeId.keyword\"}",
-        "indexName": "household-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Suspected Frauds\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.subHills.keyword\",\"size\":5000},\"aggs\":{\"daily_users\":{\"date_histogram\":{\"field\":\"Data.@timestamp\",\"calendar_interval\":\"day\"},\"aggs\":{\"users\":{\"terms\":{\"field\":\"Data.household.clientAuditDetails.createdBy.keyword\",\"size\":1000},\"aggs\":{\"house_registered_count\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}},\"users_with_more_than_15\":{\"bucket_selector\":{\"buckets_path\":{\"houseRegistered\":\"house_registered_count\"},\"script\":\"params.houseRegistered > 15\"}}}},\"number_of_users_registered_more_than_15\":{\"bucket_script\":{\"buckets_path\":{\"count_users\":\"users._bucket_count\"},\"script\":\"params.count_users\"}}}},\"total_users_registered_more_than_15\":{\"sum_bucket\":{\"buckets_path\":\"daily_users>number_of_users_registered_more_than_15\"}}}}}}"
-      }
-    ],
-    "filterKeys": [
-      {
-        "key": "subHills",
-        "column": "SubHills"
-      }
-    ],
-    "chartType": "xtable",
-    "valueType": "number",
-    "drillChart": "none",
-    "documentType": "_doc",
-    "action": "",
-    "plotLabel": "SubHills",
-    "excludedColumns": [
-      "Household with more than 20 members count",
-      "Location not enabled count",
-      "WHM Stock Entries count",
-      "total_users_registered_more_than_15",
-      "Total Houses Registered count",
-      "negative_households_visited_count"
-    ],
-    "excludedBucketKeys": [
-      "daily_users"
-    ],
-    "hideInsights": true,
-    "showFooter": true,
-    "hideHeaderDenomination": true,
-    "computedFields": [
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Household with more than 20 members count"
-        ],
-        "newField": "Household With More Than 20 Members Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Location not enabled count"
-        ],
-        "newField": "Location Not Enabled Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "WHM Stock Entries count"
-        ],
-        "newField": "WHM Stock Entries Count",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "Total Houses Registered count",
-          "negative_households_visited_count"
-        ],
-        "newField": "No. of Incomplete Records",
-        "_comments": ""
-      },
-      {
-        "postAggregationTheory": "",
-        "actionName": "AdditiveComputedField",
-        "fields": [
-          "total_users_registered_more_than_15"
-        ],
-        "newField": "Suspected Frauds Count",
-        "_comments": ""
-      }
-    ],
-    "insight": {},
-    "sort": "sortKeyAsc",
-    "_comment": " "
-  },
+
   "registrarSyncSummaryProvinceCongo": {
     "chartName": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY",
     "queries": [
@@ -5083,7 +4496,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "housesVisitedBarChartMunicipalityCongo",
+    "drillChart": "housesVisitedBarChartHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -5118,7 +4531,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "housesVisitedBarChartMunicipalityPercentCongo",
+    "drillChart": "housesVisitedBarChartHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -5147,7 +4560,7 @@
     "insight": {},
     "_comment": " "
   },
-  "housesVisitedBarChartMunicipalityCongo": {
+  "housesVisitedBarChartHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_HOUSES_VISITED_MUNICIPALITY",
     "queries": [
@@ -5162,7 +4575,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "housesVisitedBarChartAreaOfResponsibilityCongo",
+    "drillChart": "housesVisitedBarChartVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -5176,7 +4589,7 @@
     "insight": {},
     "_comment": " "
   },
-  "housesVisitedBarChartMunicipalityPercentCongo": {
+  "housesVisitedBarChartHealthAreaPercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_HOUSES_VISITED_MUNICIPALITY_PERCENT",
     "queries": [
@@ -5198,7 +4611,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "housesVisitedBarChartAreaOfResponsibilityPercentCongo",
+    "drillChart": "housesVisitedBarChartVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -5227,7 +4640,7 @@
     "insight": {},
     "_comment": " "
   },
-  "housesVisitedBarChartAreaOfResponsibilityCongo": {
+  "housesVisitedBarChartVillageCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_HOUSES_VISITED_AREA_OF_RESPONSIBILITY",
     "queries": [
@@ -5256,7 +4669,7 @@
     "insight": {},
     "_comment": " "
   },
-  "housesVisitedBarChartAreaOfResponsibilityPercentCongo": {
+  "housesVisitedBarChartVillagePercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_HOUSES_VISITED_AREA_OF_RESPONSIBILITY_PERCENT",
     "queries": [
@@ -5481,7 +4894,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "populationCoveredBarChartMunicipalityCongo",
+    "drillChart": "populationCoveredBarChartHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -5516,7 +4929,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "populationCoveredBarChartMunicipalityPercentCongo",
+    "drillChart": "populationCoveredBarChartHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -5545,7 +4958,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredBarChartMunicipalityCongo": {
+  "populationCoveredBarChartHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_POPULATION_COVERED_MUNICIPALITY",
     "queries": [
@@ -5560,7 +4973,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "populationCoveredBarChartAreaOfResponsibilityCongo",
+    "drillChart": "populationCoveredBarChartVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -5574,7 +4987,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredBarChartMunicipalityPercentCongo": {
+  "populationCoveredBarChartHealthAreaPercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_POPULATION_COVERED_MUNICIPALITY_PERCENT",
     "queries": [
@@ -5596,7 +5009,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "populationCoveredBarChartAreaOfResponsibilityPercentCongo",
+    "drillChart": "populationCoveredBarChartVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -5625,7 +5038,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredBarChartAreaOfResponsibilityCongo": {
+  "populationCoveredBarChartVillageCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_POPULATION_COVERED_AREA_OF_RESPONSIBILITY",
     "queries": [
@@ -5654,7 +5067,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredBarChartAreaOfResponsibilityPercentCongo": {
+  "populationCoveredBarChartVillagePercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_POPULATION_COVERED_AREA_OF_RESPONSIBILITY_PERCENT",
     "queries": [
@@ -5879,7 +5292,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "closedHouseholdsMunicipalityCongo",
+    "drillChart": "closedHouseholdsHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -5914,7 +5327,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "closedHouseholdsMunicipalityPercentCongo",
+    "drillChart": "closedHouseholdsHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -5931,7 +5344,7 @@
     "insight": {},
     "_comment": " "
   },
-  "closedHouseholdsMunicipalityCongo": {
+  "closedHouseholdsHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_CLOSED_HOUSEHOLD_MUNICIPALITY",
     "queries": [
@@ -5946,7 +5359,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "closedHouseholdsAreaOfResponsibilityCongo",
+    "drillChart": "closedHouseholdsVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -5960,7 +5373,7 @@
     "insight": {},
     "_comment": " "
   },
-  "closedHouseholdsMunicipalityPercentCongo": {
+  "closedHouseholdsHealthAreaPercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_CLOSED_HOUSEHOLD_MUNICIPALITY_PERCENTAGE",
     "queries": [
@@ -5982,7 +5395,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "closedHouseholdsAreaOfResponsibilityPercentCongo",
+    "drillChart": "closedHouseholdsVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -5999,7 +5412,7 @@
     "insight": {},
     "_comment": " "
   },
-  "closedHouseholdsAreaOfResponsibilityCongo": {
+  "closedHouseholdsVillageCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_CLOSED_HOUSEHOLD_AREA_OF_RESPONSIBILITY",
     "queries": [
@@ -6028,7 +5441,7 @@
     "insight": {},
     "_comment": " "
   },
-  "closedHouseholdsAreaOfResponsibilityPercentCongo": {
+  "closedHouseholdsVillagePercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_CLOSED_HOUSEHOLD_AREA_OF_RESPONSIBILITY_PERCENTAGE",
     "queries": [
@@ -6224,7 +5637,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "averageBednetsDistributedMunicipalityCongo",
+    "drillChart": "averageBednetsDistributedHealthAreaCongo",
     "documentType": "_doc",
     "action": "division",
     "aggregationPaths": [
@@ -6239,7 +5652,7 @@
     "insight": {},
     "_comment": " "
   },
-  "averageBednetsDistributedMunicipalityCongo": {
+  "averageBednetsDistributedHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_MUNICIPALITY",
     "queries": [
@@ -6261,7 +5674,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "averageBednetsDistributedAreaOfResponsibilityCongo",
+    "drillChart": "averageBednetsDistributedVillageCongo",
     "documentType": "_doc",
     "action": "division",
     "aggregationPaths": [
@@ -6276,9 +5689,9 @@
     "insight": {},
     "_comment": " "
   },
-  "averageBednetsDistributedAreaOfResponsibilityCongo": {
+  "averageBednetsDistributedVillageCongo": {
     "kind": "drillDown",
-    "chartName": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_AreaOfResponsibility",
+    "chartName": "DSS_HEALTH_AVERAGE_BEDNETS_DISTRIBUTED_Village",
     "queries": [
       {
         "module": "COMMON",
@@ -6408,7 +5821,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "registrationAndDistributionBarChartMunicipalityCongo",
+    "drillChart": "registrationAndDistributionBarChartHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -6424,7 +5837,7 @@
     "insight": {},
     "_comment": ""
   },
-  "registrationAndDistributionBarChartMunicipalityCongo": {
+  "registrationAndDistributionBarChartHealthAreaCongo": {
     "chartName": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_MUNICIPALITY",
     "queries": [
       {
@@ -6445,7 +5858,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "registrationAndDistributionBarChartAreaOfResponsibilityCongo",
+    "drillChart": "registrationAndDistributionBarChartVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -6461,8 +5874,8 @@
     "insight": {},
     "_comment": ""
   },
-  "registrationAndDistributionBarChartAreaOfResponsibilityCongo": {
-    "chartName": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_AreaOfResponsibility",
+  "registrationAndDistributionBarChartVillageCongo": {
+    "chartName": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_Village",
     "queries": [
       {
         "module": "COMMON",
@@ -6654,7 +6067,7 @@
     "drillChart": "",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "Municipality",
+    "plotLabel": "HealthArea",
     "excludedColumns": [
       "S.N.",
       "Target for daterange"
@@ -6767,7 +6180,7 @@
     "drillChart": "",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "Municipality",
+    "plotLabel": "HealthArea",
     "excludedColumns": [
       "S.N.",
       "Target for daterange"
@@ -7062,7 +6475,7 @@
     ],
     "chartType": "xtable",
     "valueType": "number",
-    "drillChart": "registrationSummaryByMunicipalityCongo",
+    "drillChart": "registrationSummaryByHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "plotLabel": "Health District",
@@ -7167,7 +6580,7 @@
     "hideHeaderDenomination": true,
     "_comment": " "
   },
-  "registrationSummaryByMunicipalityCongo": {
+  "registrationSummaryByHealthAreaCongo": {
     "chartName": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_MUNICIPALITY",
     "queries": [
       {
@@ -7216,15 +6629,15 @@
     "filterKeys": [
       {
         "key": "healthArea",
-        "column": "Municipality"
+        "column": "HealthArea"
       }
     ],
     "chartType": "xtable",
     "valueType": "number",
-    "drillChart": "registrationSummaryByAreaOfResponsibilityCongo",
+    "drillChart": "registrationSummaryByVillageCongo",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "Municipality",
+    "plotLabel": "HealthArea",
     "excludedColumns": [
       "Households visited count",
       "Closed household count",
@@ -7326,7 +6739,7 @@
     "hideHeaderDenomination": true,
     "_comment": " "
   },
-  "registrationSummaryByAreaOfResponsibilityCongo": {
+  "registrationSummaryByVillageCongo": {
     "chartName": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_AREA_OF_RESPONSIBILITY",
     "queries": [
       {
@@ -7375,7 +6788,7 @@
     "filterKeys": [
       {
         "key": "village",
-        "column": "AreaOfResponsibility"
+        "column": "Village"
       }
     ],
     "chartType": "xtable",
@@ -7383,7 +6796,7 @@
     "drillChart": "registrationSummaryByHillsCongo",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "AreaOfResponsibility",
+    "plotLabel": "Village",
     "excludedColumns": [
       "Households visited count",
       "Closed household count",
@@ -7935,7 +7348,7 @@
     "insight": {},
     "_comment": " "
   },
-  "registrationSummaryByMunicipalityDayCongo": {
+  "registrationSummaryByHealthAreaDayCongo": {
     "chartName": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_MUNICIPALITY",
     "queries": [
       {
@@ -8215,7 +7628,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageByMunicipalityCongo",
+    "drillChart": "distributionCoverageByHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -8250,7 +7663,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "distributionCoverageByMunicipalityPercentCongo",
+    "drillChart": "distributionCoverageByHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -8267,7 +7680,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageByMunicipalityCongo": {
+  "distributionCoverageByHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_MUNICIPALITY",
     "queries": [
@@ -8282,7 +7695,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageByAreaOfResponsibilityCongo",
+    "drillChart": "distributionCoverageByVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -8296,7 +7709,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageByMunicipalityPercentCongo": {
+  "distributionCoverageByHealthAreaPercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_MUNICIPALITY_PERCENT",
     "queries": [
@@ -8318,7 +7731,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "distributionCoverageByAreaOfResponsibilityPercentCongo",
+    "drillChart": "distributionCoverageByVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -8335,7 +7748,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageByAreaOfResponsibilityCongo": {
+  "distributionCoverageByVillageCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_AREA_OF_RESPONSIBILITY",
     "queries": [
@@ -8364,7 +7777,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageByAreaOfResponsibilityPercentCongo": {
+  "distributionCoverageByVillagePercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_AREA_OF_RESPONSIBILITY_PERCENT",
     "queries": [
@@ -8737,7 +8150,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "populationCoveredDistributionMunicipalityCongo",
+    "drillChart": "populationCoveredDistributionHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "filterKeys": [
@@ -8774,7 +8187,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "populationCoveredDistributionMunicipalityPercentageCongo",
+    "drillChart": "populationCoveredDistributionHealthAreaPercentageCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -8791,7 +8204,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredDistributionMunicipalityCongo": {
+  "populationCoveredDistributionHealthAreaCongo": {
     "chartName": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_MUNICIPALITY",
     "queries": [
       {
@@ -8805,7 +8218,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "populationCoveredDistributionAreaOfResponsibilityCongo",
+    "drillChart": "populationCoveredDistributionVillageCongo",
     "documentType": "_doc",
     "action": "",
     "filterKeys": [
@@ -8821,7 +8234,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredDistributionMunicipalityPercentageCongo": {
+  "populationCoveredDistributionHealthAreaPercentageCongo": {
     "chartName": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_MUNICIPALITY_PERCENTAGE",
     "queries": [
       {
@@ -8842,7 +8255,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "populationCoveredDistributionAreaOfResponsibilityPercentageCongo",
+    "drillChart": "populationCoveredDistributionVillagePercentageCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -8859,7 +8272,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredDistributionAreaOfResponsibilityCongo": {
+  "populationCoveredDistributionVillageCongo": {
     "chartName": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_AREA_OF_RESPONSIBILITY",
     "queries": [
       {
@@ -8889,7 +8302,7 @@
     "insight": {},
     "_comment": " "
   },
-  "populationCoveredDistributionAreaOfResponsibilityPercentageCongo": {
+  "populationCoveredDistributionVillagePercentageCongo": {
     "chartName": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_AREA_OF_RESPONSIBILITY_PERCENTAGE",
     "queries": [
       {
@@ -9077,7 +8490,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "bednetsDistributionCoverageMunicipalityCongo",
+    "drillChart": "bednetsDistributionCoverageHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -9112,7 +8525,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetsDistributionCoverageMunicipalityPercentCongo",
+    "drillChart": "bednetsDistributionCoverageHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -9141,7 +8554,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetsDistributionCoverageMunicipalityCongo": {
+  "bednetsDistributionCoverageHealthAreaCongo": {
     "chartName": "DSS_HEALTHL_BED_NETS_COVERAGE_MUNICIPALITY",
     "queries": [
       {
@@ -9155,7 +8568,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "bednetsDistributionCoverageAreaOfResponsibilityCongo",
+    "drillChart": "bednetsDistributionCoverageVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -9169,7 +8582,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetsDistributionCoverageMunicipalityPercentCongo": {
+  "bednetsDistributionCoverageHealthAreaPercentCongo": {
     "chartName": "DSS_HEALTHL_BED_NETS_COVERAGE_MUNICIPALITY_PERCENT",
     "queries": [
       {
@@ -9190,7 +8603,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetsDistributionCoverageAreaOfResponsibilityPercentCongo",
+    "drillChart": "bednetsDistributionCoverageVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -9219,7 +8632,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetsDistributionCoverageAreaOfResponsibilityCongo": {
+  "bednetsDistributionCoverageVillageCongo": {
     "chartName": "DSS_HEALTHL_BED_NETS_COVERAGE_AREA_OF_RESPONSIBILITY",
     "queries": [
       {
@@ -9247,7 +8660,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetsDistributionCoverageAreaOfResponsibilityPercentCongo": {
+  "bednetsDistributionCoverageVillagePercentCongo": {
     "chartName": "DSS_HEALTHL_BED_NETS_COVERAGE_AREA_OF_RESPONSIBILITY_PERCENT",
     "queries": [
       {
@@ -9648,7 +9061,7 @@
     ],
     "chartType": "xtable",
     "valueType": "number",
-    "drillChart": "distributionSummaryByMunicipalityCongo",
+    "drillChart": "distributionSummaryByHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "plotLabel": "Health District",
@@ -9764,7 +9177,7 @@
     "hideHeaderDenomination": true,
     "_comment": " "
   },
-  "distributionSummaryByMunicipalityCongo": {
+  "distributionSummaryByHealthAreaCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_MUNICIPALITY",
     "queries": [
       {
@@ -9806,15 +9219,15 @@
     "filterKeys": [
       {
         "key": "healthArea",
-        "column": "Municipality"
+        "column": "HealthArea"
       }
     ],
     "chartType": "xtable",
     "valueType": "number",
-    "drillChart": "distributionSummaryByAreaOfResponsibilityCongo",
+    "drillChart": "distributionSummaryByVillageCongo",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "Municipality",
+    "plotLabel": "HealthArea",
     "excludedColumns": [
       "Households visited count",
       "Closed household count",
@@ -9927,7 +9340,7 @@
     "hideHeaderDenomination": true,
     "_comment": " "
   },
-  "distributionSummaryByAreaOfResponsibilityCongo": {
+  "distributionSummaryByVillageCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_AREA_OF_RESPONSIBILITY",
     "queries": [
       {
@@ -9969,7 +9382,7 @@
     "filterKeys": [
       {
         "key": "village",
-        "column": "AreaOfResponsibility"
+        "column": "Village"
       }
     ],
     "chartType": "xtable",
@@ -9977,7 +9390,7 @@
     "drillChart": "distributionSummaryByHillsCongo",
     "documentType": "_doc",
     "action": "",
-    "plotLabel": "AreaOfResponsibility",
+    "plotLabel": "Village",
     "excludedColumns": [
       "Households visited count",
       "Closed household count",
@@ -10551,7 +9964,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionSummaryByMunicipalityDayCongo": {
+  "distributionSummaryByHealthAreaDayCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_MUNICIPALITY",
     "queries": [
       {
@@ -11030,7 +10443,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageSpecialGroupsMunicipalityCongo",
+    "drillChart": "distributionCoverageSpecialGroupsHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -11065,7 +10478,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "distributionCoverageSpecialGroupsPercentMunicipalityCongo",
+    "drillChart": "distributionCoverageSpecialGroupsPercentHealthAreaCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -11094,7 +10507,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageSpecialGroupsMunicipalityCongo": {
+  "distributionCoverageSpecialGroupsHealthAreaCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
     "queries": [
       {
@@ -11108,7 +10521,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageSpecialGroupsAreaOfResponsibilityCongo",
+    "drillChart": "distributionCoverageSpecialGroupsVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -11122,7 +10535,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageSpecialGroupsPercentMunicipalityCongo": {
+  "distributionCoverageSpecialGroupsPercentHealthAreaCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
     "queries": [
       {
@@ -11143,7 +10556,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "distributionCoverageSpecialGroupsPercentAreaOfResponsibilityCongo",
+    "drillChart": "distributionCoverageSpecialGroupsPercentVillageCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -11172,7 +10585,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageSpecialGroupsAreaOfResponsibilityCongo": {
+  "distributionCoverageSpecialGroupsVillageCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
     "queries": [
       {
@@ -11200,7 +10613,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageSpecialGroupsPercentAreaOfResponsibilityCongo": {
+  "distributionCoverageSpecialGroupsPercentVillageCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
     "queries": [
       {
@@ -11420,7 +10833,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageRefugeeCampsMunicipalityCongo",
+    "drillChart": "distributionCoverageRefugeeCampsHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -11455,7 +10868,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "distributionCoverageRefugeeCampsPercentMunicipalityCongo",
+    "drillChart": "distributionCoverageRefugeeCampsPercentHealthAreaCongo",
     "documentType": "_doc",
     "action": "percentage",
     "aggregationPaths": [
@@ -11470,7 +10883,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageRefugeeCampsMunicipalityCongo": {
+  "distributionCoverageRefugeeCampsHealthAreaCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_REFUGEE_CAMPS_GROUPS",
     "queries": [
       {
@@ -11484,7 +10897,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageRefugeeCampsAreaOfResponsibilityCongo",
+    "drillChart": "distributionCoverageRefugeeCampsVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -11498,7 +10911,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageRefugeeCampsPercentMunicipalityCongo": {
+  "distributionCoverageRefugeeCampsPercentHealthAreaCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
     "queries": [
       {
@@ -11519,7 +10932,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "distributionCoverageRefugeeCampsPercentAreaOfResponsibilityCongo",
+    "drillChart": "distributionCoverageRefugeeCampsPercentVillageCongo",
     "documentType": "_doc",
     "action": "percentage",
     "aggregationPaths": [
@@ -11534,7 +10947,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageRefugeeCampsAreaOfResponsibilityCongo": {
+  "distributionCoverageRefugeeCampsVillageCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
     "queries": [
       {
@@ -11562,7 +10975,7 @@
     "insight": {},
     "_comment": " "
   },
-  "distributionCoverageRefugeeCampsPercentAreaOfResponsibilityCongo": {
+  "distributionCoverageRefugeeCampsPercentVillageCongo": {
     "chartName": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
     "queries": [
       {
@@ -11740,7 +11153,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "bednetDistributionCoverageSpecialGroupsMunicipalityCongo",
+    "drillChart": "bednetDistributionCoverageSpecialGroupsHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -11775,7 +11188,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetDistributionCoverageSpecialGroupsPercentMunicipalityCongo",
+    "drillChart": "bednetDistributionCoverageSpecialGroupsPercentHealthAreaCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -11804,7 +11217,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageSpecialGroupsMunicipalityCongo": {
+  "bednetDistributionCoverageSpecialGroupsHealthAreaCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
     "queries": [
       {
@@ -11818,7 +11231,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "bednetDistributionCoverageSpecialGroupsAreaOfResponsibilityCongo",
+    "drillChart": "bednetDistributionCoverageSpecialGroupsVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -11832,7 +11245,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageSpecialGroupsPercentMunicipalityCongo": {
+  "bednetDistributionCoverageSpecialGroupsPercentHealthAreaCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
     "queries": [
       {
@@ -11853,7 +11266,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetDistributionCoverageSpecialGroupsPercentAreaOfResponsibilityCongo",
+    "drillChart": "bednetDistributionCoverageSpecialGroupsPercentVillageCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -11882,7 +11295,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageSpecialGroupsAreaOfResponsibilityCongo": {
+  "bednetDistributionCoverageSpecialGroupsVillageCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
     "queries": [
       {
@@ -11910,7 +11323,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageSpecialGroupsPercentAreaOfResponsibilityCongo": {
+  "bednetDistributionCoverageSpecialGroupsPercentVillageCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
     "queries": [
       {
@@ -12130,7 +11543,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "bednetDistributionCoverageRefugeeCampsMunicipalityCongo",
+    "drillChart": "bednetDistributionCoverageRefugeeCampsHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -12165,7 +11578,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetDistributionCoverageRefugeeCampsPercentMunicipalityCongo",
+    "drillChart": "bednetDistributionCoverageRefugeeCampsPercentHealthAreaCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -12194,7 +11607,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageRefugeeCampsMunicipalityCongo": {
+  "bednetDistributionCoverageRefugeeCampsHealthAreaCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
     "queries": [
       {
@@ -12208,7 +11621,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "bednetDistributionCoverageRefugeeCampsAreaOfResponsibilityCongo",
+    "drillChart": "bednetDistributionCoverageRefugeeCampsVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -12222,7 +11635,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageRefugeeCampsPercentMunicipalityCongo": {
+  "bednetDistributionCoverageRefugeeCampsPercentHealthAreaCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
     "queries": [
       {
@@ -12243,7 +11656,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetDistributionCoverageRefugeeCampsPercentAreaOfResponsibilityCongo",
+    "drillChart": "bednetDistributionCoverageRefugeeCampsPercentVillageCongo",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -12272,7 +11685,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageRefugeeCampsAreaOfResponsibilityCongo": {
+  "bednetDistributionCoverageRefugeeCampsVillageCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
     "queries": [
       {
@@ -12300,7 +11713,7 @@
     "insight": {},
     "_comment": " "
   },
-  "bednetDistributionCoverageRefugeeCampsPercentAreaOfResponsibilityCongo": {
+  "bednetDistributionCoverageRefugeeCampsPercentVillageCongo": {
     "chartName": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
     "queries": [
       {
@@ -12896,7 +12309,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "refusalCasesMunicipalityCongo",
+    "drillChart": "refusalCasesHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -12931,7 +12344,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "refusalCasesMunicipalityPercentCongo",
+    "drillChart": "refusalCasesHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -12948,7 +12361,7 @@
     "insight": {},
     "_comment": " "
   },
-  "refusalCasesMunicipalityCongo": {
+  "refusalCasesHealthAreaCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_REFUSAL_CASES_MUNICIPALITY",
     "queries": [
@@ -12963,7 +12376,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "refusalCasesAreaOfResponsibilityCongo",
+    "drillChart": "refusalCasesVillageCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -12977,7 +12390,7 @@
     "insight": {},
     "_comment": " "
   },
-  "refusalCasesMunicipalityPercentCongo": {
+  "refusalCasesHealthAreaPercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_REFUSAL_CASES_MUNICIPALITY_PERCENTAGE",
     "queries": [
@@ -12999,7 +12412,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "refusalCasesAreaOfResponsibilityPercentCongo",
+    "drillChart": "refusalCasesVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "filterKeys": [
@@ -13016,7 +12429,7 @@
     "insight": {},
     "_comment": " "
   },
-  "refusalCasesAreaOfResponsibilityCongo": {
+  "refusalCasesVillageCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_REFUSAL_CASES_AREA_OF_RESPONSIBILITY",
     "queries": [
@@ -13045,7 +12458,7 @@
     "insight": {},
     "_comment": " "
   },
-  "refusalCasesAreaOfResponsibilityPercentCongo": {
+  "refusalCasesVillagePercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_REFUSAL_CASES_AREA_OF_RESPONSIBILITY_PERCENTAGE",
     "queries": [
@@ -13234,7 +12647,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "uniqueVsTotalUsersInBillMunicipalityCongo",
+    "drillChart": "uniqueVsTotalUsersInBillHealthAreaCongo",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -13250,7 +12663,7 @@
     "insight": {},
     "_comment": ""
   },
-  "uniqueVsTotalUsersInBillMunicipalityCongo": {
+  "uniqueVsTotalUsersInBillHealthAreaCongo": {
     "chartName": "DSS_HEALTH_UNIQUE_VS_TOTAL_USERS_IN_BILL",
     "queries": [
       {
@@ -13302,7 +12715,7 @@
     "isCumulative": false,
     "valueType": "percentage",
     "plotLabel": "none",
-    "drillChart": "attendanceMunicipalityPercentCongo",
+    "drillChart": "attendanceHealthAreaPercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "aggregationPaths": [
@@ -13317,7 +12730,7 @@
       }
     ]
   },
-  "attendanceMunicipalityPercentCongo": {
+  "attendanceHealthAreaPercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_ATTENDANCE_MUNICIPALITY_PERCENT",
     "queries": [
@@ -13340,7 +12753,7 @@
     "isCumulative": false,
     "valueType": "percentage",
     "plotLabel": "none",
-    "drillChart": "attendanceAreaOfResponsibilityPercentCongo",
+    "drillChart": "attendanceVillagePercentCongo",
     "documentType": "_doc",
     "action": "percentage",
     "aggregationPaths": [
@@ -13355,7 +12768,7 @@
       }
     ]
   },
-  "attendanceAreaOfResponsibilityPercentCongo": {
+  "attendanceVillagePercentCongo": {
     "kind": "drillDown",
     "chartName": "DSS_HEALTH_ATTENDANCE_AREA_OF_RESPONSIBILITY_PERCENT",
     "queries": [
