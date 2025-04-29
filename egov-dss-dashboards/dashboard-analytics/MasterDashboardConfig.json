@@ -1489,7 +1489,7 @@
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "InventorySummaryByDistrictCongo",
+                  "id": "inventorySummaryByDistrictCongo",
                   "name": "DSS_HEALTH_INVENTORY_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
