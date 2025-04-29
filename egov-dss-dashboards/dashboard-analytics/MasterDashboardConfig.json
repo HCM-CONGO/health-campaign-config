@@ -418,10 +418,10 @@
         },
         {
           "row": 1,
-          "name": "DSS_HEALTH_REGISTRATION",
+          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
           "vizArray": [
             {
-              "id": 3070,
+              "id": 6027,
               "name": "DSS_HEALTH_REGISTRATION_USER_SYNC",
               "label": "DSS_HEALTH_REGISTRATION_USER_SYNC",
               "vizType": "bannercard",
@@ -430,7 +430,7 @@
               "charts": [
                 {
                   "id": "registrarSyncSummaryProvinceCongo",
-                  "name": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY",
+                  "name": "DSS_HEALTH_REGISTRAR_SYNC_SUMMARY_PROVINCE",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -442,10 +442,10 @@
         },
         {
           "row": 2,
-          "name": "DSS_HEALTH_REGISTRATION",
+          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
           "vizArray": [
             {
-              "id": 3071,
+              "id": 6028,
               "name": "DSS_HEALTH_HOUSEHOLDS_COVERED",
               "label": "DSS_HEALTH_HOUSEHOLDS_COVERED",
               "vizType": "chart",
@@ -473,7 +473,7 @@
               ]
             },
             {
-              "id": 3072,
+              "id": 6029,
               "name": "DSS_HEALTH_POPULATION_COVERED",
               "label": "DSS_HEALTH_POPULATION_COVERED",
               "vizType": "chart",
@@ -504,19 +504,19 @@
         },
         {
           "row": 3,
-          "name": "DSS_HEALTH_REGISTRATION",
+          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
           "vizArray": [
             {
-              "id": 3073,
-              "name": "DSS_HEALTH_CLOSED_HOUSEHOLDS",
-              "label": "DSS_HEALTH_CLOSED_HOUSEHOLDS",
+              "id": 6030,
+              "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE",
+              "label": "DSS_HEALTH_DISTRIBUTION_COVERAGE",
               "vizType": "chart",
               "noUnit": false,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "closedHouseholdsDistrictPercentCongo",
-                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_DISTRICT_PERCENTAGE",
+                  "id": "bednetsDistributionCoverageDistrictPercentCongo",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT_PERCENT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -524,8 +524,8 @@
                   "tabName": "PERCENT"
                 },
                 {
-                  "id": "closedHouseholdsDistrictCongo",
-                  "name": "DSS_HEALTH_CLOSED_HOUSEHOLD_DISTRICT",
+                  "id": "distributionCoverageByDistrictCongo",
+                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -535,54 +535,18 @@
               ]
             },
             {
-              "id": 3073,
-              "name": "DSS_HEALTH_REFUSAL_CASES",
-              "label": "DSS_HEALTH_REFUSAL_CASES",
+              "id": 6032,
+              "name": "DSS_HEALTH_R_D_HOUSEHOLD_NOT_DELIVERED",
+              "label": "DSS_HEALTH_R_D_HOUSEHOLD_NOT_DELIVERED",
               "vizType": "chart",
               "noUnit": false,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "refusalCasesDistrictPercentCongo",
-                  "name": "DSS_HEALTH_REFUSAL_CASES_DISTRICT_PERCENTAGE",
+                  "id": "totalHouseholdsNotDeliveredChartProvinceCongo",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_NOT_DELIVERED_PROVINCE",
                   "code": "",
                   "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "refusalCasesDistrictCongo",
-                  "name": "DSS_HEALTH_REFUSAL_CASES_DISTRICT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_REGISTRATION",
-          "vizArray": [
-            {
-              "id": 3074,
-              "name": "DSS_HEALTH_COMMUNITIES_COVERED_NOT_COVERED",
-              "label": "DSS_HEALTH_COMMUNITIES_COVERED_NOT_COVERED",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "communitiesCoveredNotCoveredCongo",
-                  "name": "DASHBOARD_COMMUNITIES_COVERED_AND_NOT_COVERED",
-                  "code": "",
-                  "moduleName": "Congo-bednet",
-                  "pageName": "communities-covered-and-not-covered",
-                  "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
                 }
@@ -591,11 +555,45 @@
           ]
         },
         {
-          "row": 5,
-          "name": "DSS_HEALTH_REGISTRATION",
+          "row": 6,
+          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
           "vizArray": [
             {
-              "id": 217,
+              "id": 6034,
+              "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
+              "label": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "householdsCoverageHeatMapProvinceCongo",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
+                  "code": "",
+                  "chartType": "heatmap",
+                  "filter": "",
+                  "headers": [],
+                  "tabName": "HOUSEHOLDS"
+                },
+                {
+                  "id": "populationCoverageHeatMapProvinceCongo",
+                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_PROVINCE",
+                  "code": "",
+                  "chartType": "heatmap",
+                  "filter": "",
+                  "headers": [],
+                  "tabName": "POPULATION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
+          "vizArray": [
+            {
+              "id": 6035,
               "name": "DSS_HEALTH_ACTUAL_VS_PLANNED_LINE_GRAPH",
               "label": "DSS_HEALTH_ACTUAL_VS_PLANNED_LINE_GRAPH",
               "vizType": "chart",
@@ -608,7 +606,7 @@
                   "code": "",
                   "chartType": "line",
                   "filter": "",
-                  "tabName": "Household",
+                  "tabName": "HOUSEHOLDS",
                   "headers": []
                 },
                 {
@@ -634,54 +632,20 @@
           ]
         },
         {
-          "row": 6,
-          "name": "DSS_HEALTH_REGISTRATION",
+          "row": 8,
+          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
           "vizArray": [
             {
-              "id": 3075,
-              "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-              "label": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdsCoverageHeatMapProvinceCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "HOUSEHOLD"
-                },
-                {
-                  "id": "populationCoverageHeatMapProvinceCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_PROVINCE",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "POPULATION"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 5,
-          "name": "DSS_HEALTH_REGISTRATION",
-          "vizArray": [
-            {
-              "id": 2607,
-              "name": "DSS_HEALTH_SUMMARY_REGISTRATION",
-              "label": "DSS_HEALTH_SUMMARY_REGISTRATION",
+              "id": 6036,
+              "name": "DSS_HEALTH_SUMMARY_REGISTRATION_CABO",
+              "label": "DSS_HEALTH_SUMMARY_REGISTRATION_CABO",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
                   "id": "registrationSummaryByDistrictCongo",
-                  "name": "DSS_HEALTH_RESGISTRATION_SUMMARY_BY_DISTRICT",
+                  "name": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -691,345 +655,6 @@
                 {
                   "id": "registrationSummaryByDistrictDayCongo",
                   "name": "DSS_HEALTH_REGISTRATION_SUMMARY_BY_DISTRICT",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "DAYWISE"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3080,
-              "name": "DSS_HEALTH_DISTRIBUTION_USER_SYNC",
-              "label": "DSS_HEALTH_DISTRIBUTION_USER_SYNC",
-              "vizType": "bannercard",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "distributorSyncSummaryProvinceCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTOR_SYNC_SUMMARY",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3081,
-              "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE",
-              "label": "DSS_HEALTH_DISTRIBUTION_COVERAGE",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "distributionCoverageByDistrictPercentCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "distributionCoverageByDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_BY_DISTRICT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            },
-            {
-              "id": 3082,
-              "name": "DSS_HEALTH_POPULATION_COVERAGE",
-              "label": "DSS_HEALTH_POPULATION_COVERAGE",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "populationCoveredDistributionDistrictPercentageCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_DISTRICT_PERCENTAGE",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "populationCoveredDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERED_DISTRIBUTION_DISTRICT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 3,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3083,
-              "name": "DSS_HEALTH_BEDNETS_DISTRIBUTED",
-              "label": "DSS_HEALTH_BEDNETS_DISTRIBUTED",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "bednetsDistributionCoverageDistrictPercentCongo",
-                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_DISTRICT_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "bednetsDistributionCoverageDistrictCongo",
-                  "name": "DSS_HEALTHL_BED_NETS_COVERAGE_DISTRICT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            },
-            {
-              "id": 3084,
-              "name": "DSS_HEALTH_VOUCHERS_REDEEMED",
-              "label": "DSS_HEALTH_VOUCHERS_REDEEMED",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "registrationAndDistributionBarChartHealthDistrictCongo",
-                  "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION_BAR_CHART_HEALTH_DISTRICT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3085,
-              "name": "DSS_HEALTH_TARGET_ACHIEVEMENT",
-              "label": "DSS_HEALTH_TARGET_ACHIEVEMENT",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdsCoverageHeatMapDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "HOUSEHOLD"
-                },
-                {
-                  "id": "populationCoverageHeatMapDistributionDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRIBUTION_DISTRICT",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "POPULATION"
-                },
-                {
-                  "id": "bednetsCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNETS_COVERAGE_HEATMAP_DISTRICT",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "BEDNETS"
-                }
-              ]
-            },
-            {
-              "id": 3086,
-              "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
-              "label": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "distributionCoverageSpecialGroupsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "distributionCoverageSpecialGroupsDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 5,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3087,
-              "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
-              "label": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "distributionCoverageRefugeeCampsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "distributionCoverageRefugeeCampsDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            },
-            {
-              "id": 3088,
-              "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
-              "label": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "bednetDistributionCoverageSpecialGroupsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "bednetDistributionCoverageSpecialGroupsDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_SPECIAL_GROUPS",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 6,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3089,
-              "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
-              "label": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
-              "vizType": "chart",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "bednetDistributionCoverageRefugeeCampsPercentDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS_PERCENT",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "PERCENT"
-                },
-                {
-                  "id": "bednetDistributionCoverageRefugeeCampsDistrictCongo",
-                  "name": "DSS_HEALTH_BEDNET_DISTRIBUTION_COVERAGE_REFUGEE_CAMPS",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "NUMBER"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 7,
-          "name": "DSS_HEALTH_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 3090,
-              "name": "DSS_HEALTH_SUMMARY_DISTRIBUTION",
-              "label": "DSS_HEALTH_SUMMARY_DISTRIBUTION",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "distributionSummaryByDistrictCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_DISTRICT",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "BOUNDARY"
-                },
-                {
-                  "id": "distributionSummaryByDistrictDayCongo",
-                  "name": "DSS_HEALTH_DISTRIBUTION_SUMMARY_BY_DISTRICT",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
