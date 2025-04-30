@@ -4161,7 +4161,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "housesVisitedBarChartVillagePercentCongo",
+    "drillChart": "none",
     "documentType": "_doc",
     "action": "percentage",
     "computedFields": [
@@ -4259,7 +4259,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "housesVisitedBarChartVillageCongo",
+    "drillChart": "none",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -4369,7 +4369,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "populationCoveredBarChartVillagePercentCongo",
+    "drillChart": "none",
     "documentType": "_doc",
     "action": "percentage",
     "aggregationPaths": [
@@ -4456,7 +4456,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "populationCoveredBarChartVillageCongo",
+    "drillChart": "none",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -4542,7 +4542,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "number",
-    "drillChart": "distributionCoverageByVillageCongo",
+    "drillChart": "none",
     "documentType": "_doc",
     "action": "",
     "aggregationPaths": [
@@ -4663,7 +4663,7 @@
     "chartType": "line",
     "isCumulative": false,
     "valueType": "percentage",
-    "drillChart": "bednetsDistributionCoverageVillagePercentCongo",
+    "drillChart": "none",
     "documentType": "_doc",
     "action": "percentage",
     "aggregationPaths": [
@@ -5428,7 +5428,7 @@
           "Total Households distributed",
           "Household Target for Date Range"
         ],
-        "newField": "Target Achievement Household Cabo",
+        "newField": "Target Achievement Household",
         "_comments": ""
       },
       {
@@ -5447,7 +5447,7 @@
           "Total Population covered",
           "Population Target for Date Range"
         ],
-        "newField": "Target Achievement Population Cabo",
+        "newField": "Target Achievement Population",
         "_comments": ""
       },
       {
@@ -5466,7 +5466,7 @@
           "Total Bednets distributed",
           "Bednets Target for Date Range"
         ],
-        "newField": "Target Achievement Bednets Cabo",
+        "newField": "Target Achievement Bednets",
         "_comments": ""
       },
       {
@@ -5475,7 +5475,7 @@
         "fields": [
           "Household Target for Date Range"
         ],
-        "newField": "Households Targeted for Date Range Cabo",
+        "newField": "Households Targeted for Date Range",
         "_comments": ""
       },
       {
@@ -5484,7 +5484,7 @@
         "fields": [
           "Households distributed count"
         ],
-        "newField": "Households distributed Cabo",
+        "newField": "Households distributed",
         "_comments": ""
       },
       {
@@ -5493,7 +5493,7 @@
         "fields": [
           "Population Target for Date Range"
         ],
-        "newField": "Population Targeted for Date Range Cabo",
+        "newField": "Population Targeted for Date Range",
         "_comments": ""
       },
       {
@@ -5502,7 +5502,7 @@
         "fields": [
           "Population covered count"
         ],
-        "newField": "Population covered Cabo",
+        "newField": "Population covered",
         "_comments": ""
       },
       {
@@ -5511,7 +5511,7 @@
         "fields": [
           "Bednets Target for Date Range"
         ],
-        "newField": "Bednets Targeted for date Range Cabo",
+        "newField": "Bednets Targeted for date Range",
         "_comments": ""
       },
       {
@@ -5520,7 +5520,7 @@
         "fields": [
           "Bednets distributed count"
         ],
-        "newField": "Bednets distributed Cabo",
+        "newField": "Bednets distributed",
         "_comments": ""
       },
       {
@@ -5713,7 +5713,7 @@
           "Total Households distributed",
           "Household Target for Date Range"
         ],
-        "newField": "Target Achievement Household Cabo",
+        "newField": "Target Achievement Household",
         "_comments": ""
       },
       {
@@ -5732,7 +5732,7 @@
           "Total Population covered",
           "Population Target for Date Range"
         ],
-        "newField": "Target Achievement Population Cabo",
+        "newField": "Target Achievement Population",
         "_comments": ""
       },
       {
@@ -5751,7 +5751,7 @@
           "Total Bednets distributed",
           "Bednets Target for Date Range"
         ],
-        "newField": "Target Achievement Bednets Cabo",
+        "newField": "Target Achievement Bednets",
         "_comments": ""
       },
       {
@@ -5760,7 +5760,7 @@
         "fields": [
           "Household Target for Date Range"
         ],
-        "newField": "Households Targeted for Date Range Cabo",
+        "newField": "Households Targeted for Date Range",
         "_comments": ""
       },
       {
@@ -5769,7 +5769,7 @@
         "fields": [
           "Households distributed count"
         ],
-        "newField": "Households distributed Cabo",
+        "newField": "Households distributed",
         "_comments": ""
       },
       {
@@ -5778,7 +5778,7 @@
         "fields": [
           "Population Target for Date Range"
         ],
-        "newField": "Population Targeted for Date Range Cabo",
+        "newField": "Population Targeted for Date Range",
         "_comments": ""
       },
       {
@@ -5787,7 +5787,7 @@
         "fields": [
           "Population covered count"
         ],
-        "newField": "Population covered Cabo",
+        "newField": "Population covered",
         "_comments": ""
       },
       {
@@ -5796,7 +5796,7 @@
         "fields": [
           "Bednets Target for Date Range"
         ],
-        "newField": "Bednets Targeted for date Range Cabo",
+        "newField": "Bednets Targeted for date Range",
         "_comments": ""
       },
       {
@@ -5805,7 +5805,7 @@
         "fields": [
           "Bednets distributed count"
         ],
-        "newField": "Bednets distributed Cabo",
+        "newField": "Bednets distributed",
         "_comments": ""
       },
       {
@@ -5998,7 +5998,7 @@
           "Total Households distributed",
           "Household Target for Date Range"
         ],
-        "newField": "Target Achievement Household Cabo",
+        "newField": "Target Achievement Household",
         "_comments": ""
       },
       {
@@ -6017,7 +6017,7 @@
           "Total Population covered",
           "Population Target for Date Range"
         ],
-        "newField": "Target Achievement Population Cabo",
+        "newField": "Target Achievement Population",
         "_comments": ""
       },
       {
@@ -6036,7 +6036,7 @@
           "Total Bednets distributed",
           "Bednets Target for Date Range"
         ],
-        "newField": "Target Achievement Bednets Cabo",
+        "newField": "Target Achievement Bednets",
         "_comments": ""
       },
       {
@@ -6045,7 +6045,7 @@
         "fields": [
           "Household Target for Date Range"
         ],
-        "newField": "Households Targeted for Date Range Cabo",
+        "newField": "Households Targeted for Date Range",
         "_comments": ""
       },
       {
@@ -6054,7 +6054,7 @@
         "fields": [
           "Households distributed count"
         ],
-        "newField": "Households distributed Cabo",
+        "newField": "Households distributed",
         "_comments": ""
       },
       {
@@ -6063,7 +6063,7 @@
         "fields": [
           "Population Target for Date Range"
         ],
-        "newField": "Population Targeted for Date Range Cabo",
+        "newField": "Population Targeted for Date Range",
         "_comments": ""
       },
       {
@@ -6072,7 +6072,7 @@
         "fields": [
           "Population covered count"
         ],
-        "newField": "Population covered Cabo",
+        "newField": "Population covered",
         "_comments": ""
       },
       {
@@ -6081,7 +6081,7 @@
         "fields": [
           "Bednets Target for Date Range"
         ],
-        "newField": "Bednets Targeted for date Range Cabo",
+        "newField": "Bednets Targeted for date Range",
         "_comments": ""
       },
       {
@@ -6090,7 +6090,7 @@
         "fields": [
           "Bednets distributed count"
         ],
-        "newField": "Bednets distributed Cabo",
+        "newField": "Bednets distributed",
         "_comments": ""
       },
       {
@@ -6246,7 +6246,7 @@
         "fields": [
           "Households Distributed count"
         ],
-        "newField": "Households Distributed Cabo",
+        "newField": "Households Distributed",
         "_comments": ""
       },
       {
@@ -6255,7 +6255,7 @@
         "fields": [
           "Total Population covered"
         ],
-        "newField": "Population covered Cabo",
+        "newField": "Population covered",
         "_comments": ""
       },
       {
@@ -6264,7 +6264,7 @@
         "fields": [
           "Bednets distributed count"
         ],
-        "newField": "Bednets distributed Cabo",
+        "newField": "Bednets distributed",
         "_comments": ""
       },
       {
