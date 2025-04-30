@@ -637,8 +637,8 @@
           "vizArray": [
             {
               "id": 6036,
-              "name": "DSS_HEALTH_SUMMARY_REGISTRATION_CABO",
-              "label": "DSS_HEALTH_SUMMARY_REGISTRATION_CABO",
+              "name": "DSS_HEALTH_SUMMARY_REGISTRATION",
+              "label": "DSS_HEALTH_SUMMARY_REGISTRATION",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
