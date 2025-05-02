@@ -1029,7 +1029,7 @@
                   "id": "stockTransactionsBreakdownProvincialCongo",
                   "name": "DSS_HEALTH_STOCK_TRANSACTIONS_PROVINCIAL",
                   "code": "",
-                  "chartType": "sideBySideBar",
+                  "chartType": "bar",
                   "filter": "",
                   "headers": []
                 }
