@@ -3464,7 +3464,7 @@
     "plotLabel": "none",
     "chartType": "line",
     "valueType": "number",
-    "drillChart": "none",
+    "drillChart": "entriesDoneByWMsHealthAreaCongo",
     "isCumulative": false,
     "documentType": "_doc",
     "action": "",
@@ -4654,7 +4654,7 @@
         "dateRefField": "",
         "requestQueryMap": "{\"province\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"projectTypeId\": \"Data.projectTypeId.keyword\"}",
         "indexName": "project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"PRODUCT\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.village.keyword\"}}],\"must_not\":[{\"exists\":{\"field\":\"Data.boundaryHierarchy.village.keyword\"}}]}},\"aggs\":{\"Bednets Targeted\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.village.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"FILTER\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"PRODUCT\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.village.keyword\"}}]}},\"aggs\":{\"Bednets Targeted\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.village.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
       },
       {
         "module": "COMMON",
@@ -4834,7 +4834,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"province\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"selectedStack\": \"Data.deliveryComments.keyword\"}",
+        "requestQueryMap": "{\"province\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"selectedStack\": \"Data.deliveryComments.keyword\"}",
         "indexName": "project-task-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Delivery Comment Filter\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.deliveryComments.keyword\"}}]}},\"aggs\":{\"NATIONAL_ORIENTATION\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Program Mandate\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveryComments.keyword\":{\"value\":\"NATIONAL_ORIENTATION\"}}}]}},\"aggs\":{\"NAME\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}},\"INSUFFICIENT_RESOURCES\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Insufficent\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveryComments.keyword\":{\"value\":\"INSUFFICIENT_RESOURCES\"}}}]}},\"aggs\":{\"NAME\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}}}"
       }
