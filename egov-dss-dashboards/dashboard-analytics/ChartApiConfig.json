@@ -4834,7 +4834,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"province\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"selectedStack\": \"Data.deliveryComments.keyword\"}",
+        "requestQueryMap": "{\"province\": \"Data.boundaryHierarchy.department.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"healthArea\": \"Data.boundaryHierarchy.healthArea.keyword\", \"selectedStack\": \"Data.deliveryComments.keyword\"}",
         "indexName": "project-task-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Delivery Comment Filter\":{\"filter\":{\"bool\":{\"must\":[{\"exists\":{\"field\":\"Data.deliveryComments.keyword\"}}]}},\"aggs\":{\"NATIONAL_ORIENTATION\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Program Mandate\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveryComments.keyword\":{\"value\":\"NATIONAL_ORIENTATION\"}}}]}},\"aggs\":{\"NAME\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}},\"INSUFFICIENT_RESOURCES\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.village.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Insufficent\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.deliveryComments.keyword\":{\"value\":\"INSUFFICIENT_RESOURCES\"}}}]}},\"aggs\":{\"NAME\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}}}"
       }
