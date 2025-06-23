@@ -2,14 +2,15 @@ serviceMaps:
   serviceName: expense Service
   mappings:
     - version: 1.0
-      name: bill verification task create
-      description: create bill verification task in eg_expense_task
+      name: create task
+      description: create task in eg_expense_task
       fromTopic: expense-bill-task
       queryMaps:
-        - query: INSERT INTO eg_expense_task (id, status, type, created_by, created_time, last_modified_by, last_modified_time, additional_details) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        - query: INSERT INTO eg_expense_task (id, bill_id, status, type, created_by, created_time, last_modified_by, last_modified_time, additional_details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
           basePath: $.task
           jsonMaps:
             - jsonPath: $.task.id
+            - jsonPath: $.task.billId
             - jsonPath: $.task.status
             - jsonPath: $.task.type
             - jsonPath: $.task.auditDetails.createdBy
@@ -21,8 +22,8 @@ serviceMaps:
               dbType: JSONB
 
     - version: 1.0
-      name: bill verification task details create
-      description: create bill verification task details in eg_expense_task_details
+      name: create task details
+      description: create task details in eg_expense_task_details
       fromTopic: expense-bill-task-details
       queryMaps:
         - query: INSERT INTO eg_expense_task_details (id, tenant_id, bill_id, bill_details_id, payee_id, task_id, reference_id, response_message, status, reason_for_failure, created_by, created_time, last_modified_by, last_modified_time, additional_details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
