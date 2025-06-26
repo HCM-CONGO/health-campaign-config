@@ -92,48 +92,6 @@
           ]
         },
         {
-          "row": 2,
-          "name": "DSS_COVERAGE_BY_PROVINCE",
-          "vizArray": [
-            {
-              "id": 1801,
-              "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP",
-              "label": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP",
-              "vizType": "heatmap",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdsCoverageHeatMapCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 1802,
-              "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP",
-              "label": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP",
-              "vizType": "heatmap",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "populationCoverageHeatMapCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "row": 3,
           "name": "DSS_COVERAGE_BY_PROVINCE",
           "vizArray": [
@@ -549,40 +507,6 @@
                   "chartType": "bar",
                   "filter": "",
                   "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 6,
-          "name": "DSS_HEALTH_REGISTRATION_DISTRIBUTION",
-          "vizArray": [
-            {
-              "id": 6034,
-              "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-              "label": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdsCoverageHeatMapProvinceCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "HOUSEHOLDS"
-                },
-                {
-                  "id": "populationCoverageHeatMapProvinceCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_PROVINCE",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "POPULATION"
                 }
               ]
             }
@@ -2028,40 +1952,6 @@
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 5,
-          "name": "DSS_HEALTH_REGISTRATION",
-          "vizArray": [
-            {
-              "id": 4005,
-              "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-              "label": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_PROVINCE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdsCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_COVERAGE_HEATMAP_DISTRICT",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "HOUSEHOLD"
-                },
-                {
-                  "id": "populationCoverageHeatMapDistrictCongo",
-                  "name": "DSS_HEALTH_POPULATION_COVERAGE_HEATMAP_DISTRICT",
-                  "code": "",
-                  "chartType": "heatmap",
-                  "filter": "",
-                  "headers": [],
-                  "tabName": "POPULATION"
                 }
               ]
             }
