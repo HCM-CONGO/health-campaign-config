@@ -52,10 +52,15 @@ serviceMaps:
       description: update task status in eg_expense_task
       fromTopic: expense-task-status-update
       queryMaps:
-        - query: UPDATE eg_expense_task SET status=? WHERE id=?;
+        - query: UPDATE eg_expense_task SET status=?, last_modified_by=?, last_modified_time=?, additional_details=? WHERE id=?;
           basePath: $
           jsonMaps:
             - jsonPath: $.status
+            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.additionalDetails
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.id
 
     - version: 1.0
