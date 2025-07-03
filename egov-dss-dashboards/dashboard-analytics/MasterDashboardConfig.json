@@ -605,7 +605,7 @@
                   "id": "successfulRegistrationDistribution",
                   "name": "DASHBOARD_SUCCESSFUL_REGISTRATION_DISTRIBUTION",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "successful-registration-distribution-map",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -631,7 +631,7 @@
                   "id": "closedHouseholdMap",
                   "name": "DASHBOARD_CLOSED_HOUSEHOLD",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "closed-household-map",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -657,7 +657,7 @@
                   "id": "checklistFilledRate",
                   "name": "DASHBOARD_MAPS_CHECKLIST_FILLED",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "checklist-filled-rate",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -962,70 +962,6 @@
           ]
         },
         {
-          "row": 4,
-          "name": "DSS_HEALTH_INVENTORY",
-          "vizArray": [
-            {
-              "id": 3071,
-              "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-              "label": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-              "vizType": "latlong",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "warehouseDistributionLatLongPointsCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "points",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "warehouseDistributionLatLongTableAvlRcvdDispDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "warehouseDistributionLatLongTableDaysStockLastsDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "warehouseDistributionLatLongTableAvlRcvdDispFacilitiesCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "warehouseDistributionLatLongTableStockStatusDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "warehouseDistributionLatLongTableWarNumDistrictWiseProvincialBoardCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "row": 5,
           "name": "DSS_HEALTH_INVENTORY",
           "vizArray": [
@@ -1273,7 +1209,7 @@
                   "id": "registrationTeamPerformanceSummaryTableDistrictCongo",
                   "name": "DASHBOARD_REGISTRATION_TEAM_PERFORMANCE_SUMMARY_TABLE_DISTRICT",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "registration-team-performance-district",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -1947,7 +1883,7 @@
                   "id": "communitiesCoveredNotCoveredCongo",
                   "name": "DASHBOARD_COMMUNITIES_COVERED_AND_NOT_COVERED",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "communities-covered-and-not-covered",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -2389,7 +2325,7 @@
                   "id": "successfulRegistrationDistribution",
                   "name": "DASHBOARD_SUCCESSFUL_REGISTRATION_DISTRIBUTION",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "successful-registration-distribution-map",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -2415,7 +2351,7 @@
                   "id": "closedHouseholdMap",
                   "name": "DASHBOARD_CLOSED_HOUSEHOLD",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "closed-household-map",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -2718,38 +2654,6 @@
           ]
         },
         {
-          "row": 4,
-          "name": "DSS_HEALTH_INVENTORY",
-          "vizArray": [
-            {
-              "id": 4003,
-              "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-              "label": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-              "vizType": "latlong",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "warehouseDistributionLatLongPointsDistrictCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "points",
-                  "filter": "",
-                  "headers": []
-                },
-                {
-                  "id": "warehouseDistributionLatLongTableAvlRcvdDispFacilitiesDistrictCongo",
-                  "name": "DSS_HEALTH_WH_DISTRIBUTION_LATLONG",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "row": 5,
           "name": "DSS_HEALTH_INVENTORY",
           "vizArray": [
@@ -3015,7 +2919,7 @@
                   "id": "registrationTeamPerformanceSummaryTableMunicipalityCongo",
                   "name": "DASHBOARD_REGISTRATION_TEAM_PERFORMANCE_SUMMARY_TABLE_MUNICIPALITY",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "registration-team-performance-municipality",
                   "chartType": "kibanaComponent",
                   "filter": "",
@@ -3041,7 +2945,7 @@
                   "id": "distributionTeamPerformanceSummaryTableMunicipalityCongo",
                   "name": "DASHBOARD_DISTRIBUTION_TEAM_PERFORMANCE_SUMMARY_TABLE_MUNICIPALITY",
                   "code": "",
-                  "moduleName": "Congo-bednet",
+                  "moduleName": "congo-bednet",
                   "pageName": "distribution-team-performance-municipality",
                   "chartType": "kibanaComponent",
                   "filter": "",
