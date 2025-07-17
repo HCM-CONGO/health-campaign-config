@@ -3769,7 +3769,7 @@
         "fields": [
           "Household with more than 20 members count"
         ],
-        "newField": "Household With More Than 20 Members Count",
+        "newField": "Household With More Than 20 Members",
         "_comments": ""
       },
       {
@@ -3778,7 +3778,7 @@
         "fields": [
           "Location not enabled count"
         ],
-        "newField": "Location Not Enabled Count",
+        "newField": "Location not enabled",
         "_comments": ""
       },
       {
@@ -3787,7 +3787,7 @@
         "fields": [
           "WHM Stock Entries count"
         ],
-        "newField": "WHM Stock Entries Count",
+        "newField": "WHM Stock Entries",
         "_comments": ""
       },
       {
@@ -3797,7 +3797,7 @@
           "Total Houses Registered count",
           "negative_households_visited_count"
         ],
-        "newField": "Households Not Sprayed Count",
+        "newField": "Households Not Sprayed",
         "_comments": ""
       },
       {
@@ -3806,7 +3806,7 @@
         "fields": [
           "total_users_registered_more_than_15"
         ],
-        "newField": "Suspected Frauds Count",
+        "newField": "Suspected Frauds",
         "_comments": ""
       }
     ],
@@ -3880,7 +3880,7 @@
         "fields": [
           "Household with more than 20 members count"
         ],
-        "newField": "Household With More Than 20 Members Count",
+        "newField": "Household With More Than 20 Members",
         "_comments": ""
       },
       {
@@ -3889,7 +3889,7 @@
         "fields": [
           "Location not enabled count"
         ],
-        "newField": "Location Not Enabled Count",
+        "newField": "Location Not Enabled",
         "_comments": ""
       },
       {
@@ -3898,7 +3898,7 @@
         "fields": [
           "WHM Stock Entries count"
         ],
-        "newField": "WHM Stock Entries Count",
+        "newField": "WHM Stock Entries",
         "_comments": ""
       },
       {
@@ -3908,7 +3908,7 @@
           "Total Houses Registered count",
           "negative_households_visited_count"
         ],
-        "newField": "Households Not Sprayed Count",
+        "newField": "Households Not Sprayed",
         "_comments": ""
       },
       {
@@ -3917,7 +3917,7 @@
         "fields": [
           "total_users_registered_more_than_15"
         ],
-        "newField": "Suspected Frauds Count",
+        "newField": "Suspected Frauds",
         "_comments": ""
       }
     ],
@@ -5654,7 +5654,8 @@
       "Household Target for Date Range",
       "Population Target for Date Range",
       "Bednets Target for Date Range",
-      "Households non delivery other reason"
+      "Households non delivery other reason",
+      "Non Delivery HH Rejected"
     ],
     "computedFields": [
       {
@@ -5909,7 +5910,8 @@
       "Household Target for Date Range",
       "Population Target for Date Range",
       "Bednets Target for Date Range",
-      "Households non delivery other reason"
+      "Households non delivery other reason",
+      "Non Delivery HH Rejected"
     ],
     "computedFields": [
       {
