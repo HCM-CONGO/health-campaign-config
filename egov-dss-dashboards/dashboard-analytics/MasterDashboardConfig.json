@@ -3190,6 +3190,110 @@
               ]
             }
           ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_CUSTOM_KPI",
+          "vizArray": [
+            {
+              "id": 4108,
+              "name": "DSS_CUSTOM_KPI",
+              "label": "DSS_CUSTOM_KPI",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "dssCustomKpi",
+                  "name": "DSS_CUSTOM_KPI",
+                  "code": "",
+                  "moduleName": "congo-bednet",
+                  "pageName": "stock-summary",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_CUSTOM_KPI",
+          "vizArray": [
+            {
+              "id": 4108,
+              "name": "DSS_CUSTOM_KPI",
+              "label": "DSS_CUSTOM_KPI",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "dssCustomKpi",
+                  "name": "DSS_CUSTOM_KPI",
+                  "code": "",
+                  "moduleName": "congo-bednet",
+                  "pageName": "stock-summary-user",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_CUSTOM_KPI",
+          "vizArray": [
+            {
+              "id": 4108,
+              "name": "DSS_CUSTOM_KPI",
+              "label": "DSS_CUSTOM_KPI",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "dssCustomKpi",
+                  "name": "DSS_CUSTOM_KPI",
+                  "code": "",
+                  "moduleName": "congo-bednet",
+                  "pageName": "supervision-summary",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_CUSTOM_KPI",
+          "vizArray": [
+            {
+              "id": 4108,
+              "name": "DSS_CUSTOM_KPI",
+              "label": "DSS_CUSTOM_KPI",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "dssCustomKpi",
+                  "name": "DSS_CUSTOM_KPI",
+                  "code": "",
+                  "moduleName": "congo-bednet",
+                  "pageName": "sync-summary",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
         }
       ]
     }
