@@ -5460,10 +5460,9 @@
       },
       {
         "postAggregationTheory": "",
-        "actionName": "PercentageComputedField",
+        "actionName": "AdditiveComputedField",
         "fields": [
-          "Total Bednets distributed",
-          "Bednets Target for Date Range"
+          "Total Bednets distributed"
         ],
         "newField": "Target Achievement Bednets",
         "_comments": ""
