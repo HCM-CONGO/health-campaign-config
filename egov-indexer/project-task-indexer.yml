@@ -51,3 +51,30 @@ ServiceMaps:
               - inJsonPath: $.projectTypeId
                 outJsonPath: $.Data.additionalDetails.projectTypeId
           timeStampField: $.createdTime
+
+    - topic: delete-project-task-topic
+      configKey: INDEX
+      indexes:
+        - name: project-task-index-v1
+          type: tasks
+          id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
+          isBulk: true
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.lastModifiedTime
+
+        - name: project-task-manual-delete-index-v1
+          type: tasks
+          id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
+          isBulk: true
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.lastModifiedTime
