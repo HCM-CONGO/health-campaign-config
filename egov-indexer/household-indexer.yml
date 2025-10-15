@@ -58,6 +58,12 @@ ServiceMaps:
           isBulk: true
           jsonPath: $.*
           timeStampField: $.auditDetails.lastModifiedTime
+        - name: household-manual-delete-index-v1
+          type: household
+          id: $.clientReferenceId
+          isBulk: true
+          jsonPath: $.*
+          timeStampField: $.auditDetails.lastModifiedTime
     - topic: transformer-producer-household-member-index-v1-topic
       configKey: INDEX
       indexes:
@@ -76,6 +82,12 @@ ServiceMaps:
       configKey: INDEX
       indexes:
         - name: household-member-index-v1
+          type: member
+          id: $.id
+          isBulk: true
+          jsonPath: $.*
+          timeStampField: $.auditDetails.lastModifiedTime
+        - name: household-member-manual-delete-index-v1
           type: member
           id: $.id
           isBulk: true

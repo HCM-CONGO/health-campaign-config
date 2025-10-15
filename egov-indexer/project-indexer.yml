@@ -46,6 +46,12 @@ ServiceMaps:
           isBulk: true
           jsonPath: $.*
           timeStampField: $.auditDetails.lastModifiedTime
+        - name: project-beneficiary-manual-delete-index-v1
+          type: project-beneficiary
+          id: $.clientReferenceId,$.beneficiaryClientReferenceId,$.tenantId
+          isBulk: true
+          jsonPath: $.*
+          timeStampField: $.auditDetails.lastModifiedTime
 
 
     - topic: save-project-resource-topic
