@@ -65,7 +65,7 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $
                 outJsonPath: $.Data
-          timeStampField: $.lastModifiedTime
+          timeStampField: $.clientAuditDetails.lastModifiedTime
 
         - name: project-task-manual-delete-index-v1
           type: tasks
@@ -77,4 +77,14 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $
                 outJsonPath: $.Data
-          timeStampField: $.lastModifiedTime
+          timeStampField: $.clientAuditDetails.lastModifiedTime
+              type: tasks
+              id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
+              isBulk: true
+              jsonPath: $
+              customJsonMapping:
+                indexMapping: { "Data": {} }
+                fieldMapping:
+                  - inJsonPath: $
+                    outJsonPath: $.Data
+              timeStampField: $.lastModifiedTime
