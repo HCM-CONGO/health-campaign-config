@@ -10,7 +10,7 @@ serviceMaps:
       module: CENSUS
       objectIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
-      userUuidJsonPath: $.auditDetails.createdBy
+      # userUuidJsonPath: $.auditDetails.createdBy
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.Census
       queryMaps:
@@ -72,7 +72,7 @@ serviceMaps:
       module: CENSUS
       objectIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
-      userUuidJsonPath: $.auditDetails.createdBy
+      # userUuidJsonPath: $.auditDetails.createdBy
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: $.Census
       queryMaps:
