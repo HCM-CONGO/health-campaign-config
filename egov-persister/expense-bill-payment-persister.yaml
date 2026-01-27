@@ -383,7 +383,6 @@ serviceMaps:
     - query: INSERT into eg_expense_lineitem (id, tenantid, billDetailId, headCode, amount, paidAmount, type, status, paymentStatus, islineitempayable, createdby, createdTime, lastmodifiedby, lastModifiedTime, additionalDetails) values(?,?,?,?,?,?,?,?,?,true,?,?,?,?,?) ON CONFLICT (id,tenantid) DO UPDATE SET headcode=EXCLUDED.headcode, amount=EXCLUDED.amount, paidamount=EXCLUDED.paidamount, type=EXCLUDED.type, status=EXCLUDED.status, paymentStatus=EXCLUDED.paymentStatus, islineitempayable=EXCLUDED.islineitempayable, lastmodifiedby=EXCLUDED.lastmodifiedby, lastmodifiedtime=EXCLUDED.lastmodifiedtime, additionaldetails=EXCLUDED.additionaldetails;
       basePath: $.bill.billDetails.*.payableLineItems.*
       jsonMaps:
-
        - jsonPath: $.bill.billDetails.*.payableLineItems.*.id
 
        - jsonPath: $.bill.billDetails.*.payableLineItems.*.tenantId
@@ -413,3 +412,46 @@ serviceMaps:
        - jsonPath: $.bill.billDetails.*.payableLineItems.*.additionalDetails
          type: JSON
          dbType: JSONB
+
+
+
+
+ - version: 1.0
+   name: Bill Transaction Report Save
+   description: create bill transaction report in eg_expense_bill_transaction_report
+   fromTopic: expense-bill-transaction-report-save
+   queryMaps:
+    - query: INSERT INTO eg_expense_bill_transaction_report (id, bill_id, tenant_id, type, status, file_store_id, error_details, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id, tenant_id) DO NOTHING;
+      basePath: $.billTransactionReport
+      jsonMaps:
+       - jsonPath: $.billTransactionReport.id
+       - jsonPath: $.billTransactionReport.billId
+       - jsonPath: $.billTransactionReport.tenantId
+       - jsonPath: $.billTransactionReport.type
+       - jsonPath: $.billTransactionReport.status
+       - jsonPath: $.billTransactionReport.fileStoreId
+       - jsonPath: $.billTransactionReport.errorDetails
+         type: JSON
+         dbType: JSONB
+       - jsonPath: $.billTransactionReport.auditDetails.createdBy
+       - jsonPath: $.billTransactionReport.auditDetails.createdTime
+       - jsonPath: $.billTransactionReport.auditDetails.lastModifiedBy
+       - jsonPath: $.billTransactionReport.auditDetails.lastModifiedTime
+
+ - version: 1.0
+   name: Bill Transaction Report Update
+   description: update bill transaction report in eg_expense_bill_transaction_report
+   fromTopic: expense-bill-transaction-report-update
+   queryMaps:
+    - query: UPDATE eg_expense_bill_transaction_report SET status=?, file_store_id=?, error_details=?, last_modified_by=?, last_modified_time=? WHERE id=? AND tenant_id=?;
+      basePath: $.billTransactionReport
+      jsonMaps:
+       - jsonPath: $.billTransactionReport.status
+       - jsonPath: $.billTransactionReport.fileStoreId
+       - jsonPath: $.billTransactionReport.errorDetails
+         type: JSON
+         dbType: JSONB
+       - jsonPath: $.billTransactionReport.auditDetails.lastModifiedBy
+       - jsonPath: $.billTransactionReport.auditDetails.lastModifiedTime
+       - jsonPath: $.billTransactionReport.id
+       - jsonPath: $.billTransactionReport.tenantId
