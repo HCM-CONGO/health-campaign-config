@@ -35,69 +35,61 @@
               { "text": "{{label_description}}", "style": "table-header" },
               { "text": "{{label_debit_amount}}", "style": "table-header" }
             ],
+            "{{#rows}}[{\"text\":\"{{slNo}}\",\"style\":\"sl-no\"},{\"text\":\"{{date}}\",\"style\":\"table-content-text\"},{\"text\":\"{{billNumber}}\",\"style\":\"table-content-text\"},{\"text\":\"{{mtnTransactionId}}\",\"style\":\"table-content-text\"},{\"text\":\"{{description}}\",\"style\":\"table-content-text\"},{\"text\":\"{{debitAmount}}\",\"style\":\"table-content-number\"}]{{/rows}}"
+          ]
+        }
+      },
 
-            "{{#rows}}[
-            {\"text\":\"{{slNo}}\",\"style\":\"sl-no\"},
-            {\"text\":\"{{date}}\",\"style\":\"table-content-text\"},
-            {\"text\":\"{{billNumber}}\",\"style\":\"table-content-text\"},
-            {\"text\":\"{{mtnTransactionId}}\",\"style\":\"table-content-text\"},
-            {\"text\":\"{{description}}\",\"style\":\"table-content-text\"},
-            {\"text\":\"{{debitAmount}}\",\"style\":\"table-content-number\"}
-          ]{{/rows}}"
-    ]
+      {
+        "layout": "noBorders",
+        "margin": [0, 20, 0, 0],
+        "table": {
+          "widths": ["70%", "30%"],
+          "body": [
+            [
+              { "text": "{{label_generated_time}}", "style": "reportEndText" },
+              { "text": "{{generatedTime}}", "style": "reportEndText" }
+            ]
+          ]
+        }
+      }
+    ],
+
+    "footer": "(function(currentPage, pageCount) { return { text: 'Page ' + currentPage + ' of ' + pageCount, alignment: 'right', margin: [0, 0, 20, 0] }; })",
+
+    "styles": {
+      "header": {
+        "fontSize": 16,
+        "bold": true
+      },
+      "table-style": {
+        "margin": [0, 10, 0, 0]
+      },
+      "table-header": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black",
+        "fillColor": "#c9daf8",
+        "alignment": "center"
+      },
+      "sl-no": {
+        "fillColor": "#d4d4d4",
+        "bold": true,
+        "alignment": "left",
+        "fontSize": 9
+      },
+      "table-content-text": {
+        "alignment": "left",
+        "fontSize": 9
+      },
+      "table-content-number": {
+        "alignment": "right",
+        "fontSize": 9
+      },
+      "reportEndText": {
+        "alignment": "left",
+        "fontSize": 10
+      }
+    }
   }
-},
-
-{
-"layout": "noBorders",
-"margin": [0, 20, 0, 0],
-"table": {
-"widths": ["70%", "30%"],
-"body": [
-[
-{ "text": "{{label_generated_time}}", "style": "reportEndText" },
-{ "text": "{{generatedTime}}", "style": "reportEndText" }
-]
-]
-}
-}
-],
-
-"footer": "(function(currentPage, pageCount) { return { text: 'Page ' + currentPage + ' of ' + pageCount, alignment: 'right', margin: [0, 0, 20, 0] }; })",
-
-"styles": {
-"header": {
-"fontSize": 16,
-"bold": true
-},
-"table-style": {
-"margin": [0, 10, 0, 0]
-},
-"table-header": {
-"bold": true,
-"fontSize": 10,
-"color": "black",
-"fillColor": "#c9daf8",
-"alignment": "center"
-},
-"sl-no": {
-"fillColor": "#d4d4d4",
-"bold": true,
-"alignment": "left",
-"fontSize": 9
-},
-"table-content-text": {
-"alignment": "left",
-"fontSize": 9
-},
-"table-content-number": {
-"alignment": "right",
-"fontSize": 9
-},
-"reportEndText": {
-"alignment": "left",
-"fontSize": 10
-}
-}
-}
 }
