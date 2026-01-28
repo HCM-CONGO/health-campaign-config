@@ -1,95 +1,93 @@
 {
   "key": "health-bill-transaction-report",
-  "config": {
-    "pageSize": "A4",
-    "pageOrientation": "portrait",
-    "defaultStyle": {
-      "font": "Cambay"
-    },
-    "content": [
+  "DataConfigs": {
+    "serviceName": "hcm-payments",
+    "version": "1.0.0",
+    "baseKeyPath": "$.report",
+    "mappings": [
       {
-        "style": "header",
-        "alignment": "center",
-        "fillColor": "#FCE5CD",
-        "table": {
-          "widths": ["100%"],
-          "body": [
-            [
-              { "text": "{{reportTitle}}" }
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+
+
+              {
+                "variable": "reportTitle",
+                "value": {
+                  "path": "PDF_LABEL_TXN_REP_TRANSACTION_REPORT_TITLE"
+                },
+                "type": "label",
+                "localisation": {
+                  "required": true,
+                  "module": "hcm-payments"
+                }
+              },
+
+
+              {
+                "variable": "label_serial_no",
+                "value": { "path": "PDF_LABEL_TXN_REP_SERIAL_NO" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+              {
+                "variable": "label_date",
+                "value": { "path": "PDF_LABEL_TXN_REP_DATE" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+              {
+                "variable": "label_bill_number",
+                "value": { "path": "PDF_LABEL_TXN_REP_BILL_NUMBER" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+              {
+                "variable": "label_mtn_transaction_id",
+                "value": { "path": "PDF_LABEL_TXN_REP_MTN_TRANSACTION_ID" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+              {
+                "variable": "label_description",
+                "value": { "path": "PDF_LABEL_TXN_REP_DESCRIPTION" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+              {
+                "variable": "label_debit_amount",
+                "value": { "path": "PDF_LABEL_TXN_REP_DEBIT_AMOUNT" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+
+
+              {
+                "variable": "label_generated_time",
+                "value": { "path": "PDF_LABEL_TXN_REP_GENERATED_TIME" },
+                "type": "label",
+                "localisation": { "required": true, "module": "hcm-payments" }
+              },
+
+
+              {
+                "variable": "generatedTime",
+                "value": { "path": "$.generatedTime" },
+                "type": "date",
+                "format": "DD/MM/YYYY HH:mm:ss z"
+              },
+
+
+              {
+                "variable": "rows",
+                "value": { "path": "$.rows" }
+              }
+
             ]
-          ]
-        }
-      },
-
-      {
-        "style": "table-style",
-        "table": {
-          "headerRows": 1,
-          "widths": ["6%", "14%", "18%", "22%", "25%", "15%"],
-          "body": [
-            [
-              { "text": "{{label_serial_no}}", "style": "table-header" },
-              { "text": "{{label_date}}", "style": "table-header" },
-              { "text": "{{label_bill_number}}", "style": "table-header" },
-              { "text": "{{label_mtn_transaction_id}}", "style": "table-header" },
-              { "text": "{{label_description}}", "style": "table-header" },
-              { "text": "{{label_debit_amount}}", "style": "table-header" }
-            ],
-            "{{#rows}}[{\"text\":\"{{slNo}}\",\"style\":\"sl-no\"},{\"text\":\"{{date}}\",\"style\":\"table-content-text\"},{\"text\":\"{{billNumber}}\",\"style\":\"table-content-text\"},{\"text\":\"{{mtnTransactionId}}\",\"style\":\"table-content-text\"},{\"text\":\"{{description}}\",\"style\":\"table-content-text\"},{\"text\":\"{{debitAmount}}\",\"style\":\"table-content-number\"}]{{/rows}}"
-          ]
-        }
-      },
-
-      {
-        "layout": "noBorders",
-        "margin": [0, 20, 0, 0],
-        "table": {
-          "widths": ["70%", "30%"],
-          "body": [
-            [
-              { "text": "{{label_generated_time}}", "style": "reportEndText" },
-              { "text": "{{generatedTime}}", "style": "reportEndText" }
-            ]
-          ]
-        }
+          }
+        ]
       }
-    ],
-
-    "footer": "(function(currentPage, pageCount) { return { text: 'Page ' + currentPage + ' of ' + pageCount, alignment: 'right', margin: [0, 0, 20, 0] }; })",
-
-    "styles": {
-      "header": {
-        "fontSize": 16,
-        "bold": true
-      },
-      "table-style": {
-        "margin": [0, 10, 0, 0]
-      },
-      "table-header": {
-        "bold": true,
-        "fontSize": 10,
-        "color": "black",
-        "fillColor": "#c9daf8",
-        "alignment": "center"
-      },
-      "sl-no": {
-        "fillColor": "#d4d4d4",
-        "bold": true,
-        "alignment": "left",
-        "fontSize": 9
-      },
-      "table-content-text": {
-        "alignment": "left",
-        "fontSize": 9
-      },
-      "table-content-number": {
-        "alignment": "right",
-        "fontSize": 9
-      },
-      "reportEndText": {
-        "alignment": "left",
-        "fontSize": 10
-      }
-    }
+    ]
   }
 }
