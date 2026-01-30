@@ -80,8 +80,8 @@
 
 
               {
-                "variable": "rows",
-                "value": { "path": "$.rows" }
+                "variable": "transactions",
+                "value": { "path": "$.transactions" }
               }
 
             ]
