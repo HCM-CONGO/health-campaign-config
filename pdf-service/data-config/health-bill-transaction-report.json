@@ -3,7 +3,8 @@
   "DataConfigs": {
     "serviceName": "hcm-payments",
     "version": "1.0.0",
-    "baseKeyPath": "$.report",
+    "baseKeyPath": "$.[report]",                                                                                                                                                                                                      
+  "entityIdPath": "$.id",
     "mappings": [
       {
         "topic": "common-pdf-generation-3",
@@ -80,7 +81,7 @@
 
 
               {
-                "variable": "transactions",
+                "variable": "rows",
                 "value": { "path": "$.transactions" }
               }
 
