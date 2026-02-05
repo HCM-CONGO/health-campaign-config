@@ -229,6 +229,12 @@ serviceMaps:
             - jsonPath: $.*.identifiers.*.identifierType
             - jsonPath: $.*.identifiers.*.auditDetails.lastModifiedBy
             - jsonPath: $.*.identifiers.*.auditDetails.lastModifiedTime
+
+        - query: DELETE from individual_skill WHERE individualId=?
+          basePath: $.*.skills.*
+          jsonMaps:
+            - jsonPath:  $.*.skills.*.individualId
+
         - query: INSERT INTO individual_skill(id, clientReferenceId, individualId, type, level, experience, createdBy, lastModifiedBy, createdTime, lastModifiedTime, isDeleted) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) WHERE isDeleted=false DO UPDATE SET type = ?, level = ?, experience = ?, lastModifiedBy = ?, lastModifiedTime = ?;
           basePath: $.*.skills.*
           jsonMaps:
