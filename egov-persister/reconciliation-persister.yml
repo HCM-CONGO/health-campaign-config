@@ -1,0 +1,81 @@
+serviceMaps:
+  serviceName: reconciliation-service
+  mappings:
+
+    - version: 1.0
+      description: Persists reconciliation job run log into reconciliation_log table
+      fromTopic: save-reconciliation-log
+      isTransaction: true
+      queryMaps:
+
+          - query: INSERT INTO reconciliation_log (id, run_id, script_name, job_name, tenant_id, es_index, started_at, finished_at, status, db_record_count, es_record_count, matched_count, missing_count, training_skipped, beneficiary_skipped, processed_count, failed_count, error_message, duration_ms, triggered_by, not_in_api_count, null_dropped_count, api_failed_count, kafka_failed_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            basePath: reconciliationLog
+            jsonMaps:
+              - jsonPath: $.reconciliationLog.id
+
+              - jsonPath: $.reconciliationLog.runId
+
+              - jsonPath: $.reconciliationLog.scriptName
+
+              - jsonPath: $.reconciliationLog.jobName
+
+              - jsonPath: $.reconciliationLog.tenantId
+
+              - jsonPath: $.reconciliationLog.esIndex
+
+              - jsonPath: $.reconciliationLog.startedAt
+
+              - jsonPath: $.reconciliationLog.finishedAt
+
+              - jsonPath: $.reconciliationLog.status
+
+              - jsonPath: $.reconciliationLog.dbRecordCount
+
+              - jsonPath: $.reconciliationLog.esRecordCount
+
+              - jsonPath: $.reconciliationLog.matchedCount
+
+              - jsonPath: $.reconciliationLog.missingCount
+
+              - jsonPath: $.reconciliationLog.trainingSkipped
+
+              - jsonPath: $.reconciliationLog.beneficiarySkipped
+
+              - jsonPath: $.reconciliationLog.processedCount
+
+              - jsonPath: $.reconciliationLog.failedCount
+
+              - jsonPath: $.reconciliationLog.errorMessage
+
+              - jsonPath: $.reconciliationLog.durationMs
+
+              - jsonPath: $.reconciliationLog.triggeredBy
+
+              - jsonPath: $.reconciliationLog.notInApiCount
+
+              - jsonPath: $.reconciliationLog.nullDroppedCount
+
+              - jsonPath: $.reconciliationLog.apiFailedCount
+
+              - jsonPath: $.reconciliationLog.kafkaFailedCount
+
+    - version: 1.0
+      description: Persists failed/dropped record IDs into reconciliation_failed_record table
+      fromTopic: save-reconciliation-failed-record
+      isTransaction: true
+      queryMaps:
+
+          - query: INSERT INTO reconciliation_failed_record (id, run_id, job_name, tenant_id, client_reference_id, failure_type) VALUES (?, ?, ?, ?, ?, ?);
+            basePath: $.*
+            jsonMaps:
+              - jsonPath: $.*.id
+
+              - jsonPath: $.*.runId
+
+              - jsonPath: $.*.jobName
+
+              - jsonPath: $.*.tenantId
+
+              - jsonPath: $.*.clientReferenceId
+
+              - jsonPath: $.*.failureType
